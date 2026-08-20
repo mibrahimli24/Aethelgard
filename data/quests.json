@@ -1,0 +1,120 @@
+{
+  "quests": [
+    {
+      "quest_id": "whispers_in_the_glade",
+      "title": "Whispers in the Glade",
+      "biome": "The Whispering Glades",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "start",
+          "objective": "Speak to Garrick Hale about the recent wolf attacks near Glenbrook Hollow.",
+          "auto_active": true
+        },
+        {
+          "stage": 1,
+          "id": "investigate_wolves",
+          "objective": "Slay 3 Dire Wolves to gather proof of what's driving them mad.",
+          "advance_condition": {
+            "type": "kill_count",
+            "target": "dire_wolf",
+            "count": 3
+          }
+        },
+        {
+          "stage": 2,
+          "id": "report_to_garrick",
+          "objective": "Return to Garrick Hale with proof of the wolves' unnatural aggression.",
+          "advance_condition": {
+            "type": "dialogue_flag",
+            "npc_id": "garrick_hale",
+            "flag": "reported_wolf_proof_to_garrick"
+          }
+        },
+        {
+          "stage": 3,
+          "id": "ask_mira",
+          "objective": "Ask Mira Thistlewood if she knows why the beasts of the Glades have turned feral.",
+          "advance_condition": {
+            "type": "dialogue_flag",
+            "npc_id": "mira_thistlewood",
+            "flag": "learned_bloodstone_secret"
+          }
+        },
+        {
+          "stage": 4,
+          "id": "find_camp",
+          "objective": "Follow Garrick's directions to the Red Fang Clan camp beyond the Old Barrow ridge.",
+          "advance_condition": {
+            "type": "dialogue_flag",
+            "npc_id": "garrick_hale",
+            "flag": "learned_camp_location"
+          }
+        },
+        {
+          "stage": 5,
+          "id": "clear_camp",
+          "objective": "Clear the Red Fang Clan camp of its bandits.",
+          "advance_condition": {
+            "type": "kill_count",
+            "target": "red_fang_bandit",
+            "count": 4
+          }
+        },
+        {
+          "stage": 6,
+          "id": "boss_fight",
+          "objective": "Defeat Skar, Beastmaster of the Red Fang Clan.",
+          "advance_condition": {
+            "type": "kill_count",
+            "target": "skar",
+            "count": 1
+          }
+        },
+        {
+          "stage": 7,
+          "id": "complete",
+          "objective": "The Bloodstone Shard's grip on the Glades is broken.",
+          "rewards": {
+            "grant_exp": {"amount": 500},
+            "give_item": "bloodstone_shard_fragment",
+            "unlock_recipe": "iron_tier_swordsman_armor"
+          },
+          "triggers_game_phase": "Rebuilding_Era"
+        }
+      ]
+    },
+    {
+      "quest_id": "rebuilding_glenbrook",
+      "title": "Rebuilding Glenbrook",
+      "biome": "The Whispering Glades",
+      "requires_game_phase": "Rebuilding_Era",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "meet_ferris",
+          "objective": "Speak with Old Ferris, Glenbrook's blacksmith, now that the Glades are safer.",
+          "auto_active": true
+        },
+        {
+          "stage": 1,
+          "id": "bring_shard",
+          "objective": "Bring Old Ferris the Bloodstone Shard fragment so he can study its strange heat.",
+          "advance_condition": {
+            "type": "dialogue_flag",
+            "npc_id": "old_ferris",
+            "flag": "gave_shard_to_ferris"
+          }
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "Old Ferris tempers new gear from the shard's strange heat.",
+          "rewards": {
+            "unlock_recipe_for_active_class": "%s_tier2"
+          }
+        }
+      ]
+    }
+  ]
+}

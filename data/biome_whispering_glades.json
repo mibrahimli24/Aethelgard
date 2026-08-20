@@ -1,0 +1,25 @@
+{
+  "biome_name": "The Whispering Glades",
+  "level_range": [1, 15],
+  "boss": {
+    "name": "Skar, Beastmaster of the Red Fang Clan",
+    "level": 15,
+    "hp": 400,
+    "damage": 18,
+    "abilities": ["Howling Command (buffs nearby wolves)", "Bloodstone Frenzy (telegraphed heavy strike)"]
+  },
+  "fauna_unhostile": ["Deer", "Rabbits"],
+  "fauna_hostile": [
+    {"name": "Dire Wolf", "id": "dire_wolf", "hp": 40, "damage": 6, "exp_reward": 25},
+    {"name": "Boar", "id": "boar", "hp": 35, "damage": 5, "exp_reward": 20}
+  ],
+  "camp": {
+    "name": "Red Fang Clan Camp",
+    "bandit_id": "red_fang_bandit",
+    "bandit_hp": 60,
+    "bandit_damage": 8,
+    "bandit_exp_reward": 40,
+    "bandit_count": 4
+  },
+  "resources": ["Oak Wood", "Copper Ore", "Raw Meat", "Hide"]
+}

@@ -1,0 +1,45 @@
+# Godot 4 ignore patterns
+.godot/
+*.export_presets.cfg.json
+export/
+*.tres.json
+
+# User save data
+user://
+*.save
+save.json
+
+# Import cache
+*.import
+
+# IDE and editor files
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node/npm (if used)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+
+# Local environment files
+.env
+.env.local
+*.local.json

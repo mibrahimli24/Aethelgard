@@ -1,0 +1,172 @@
+{
+  "region": "Glenbrook Hollow, The Whispering Glades",
+  "npcs": [
+    {
+      "npc_id": "mira_thistlewood",
+      "name": "Mira Thistlewood",
+      "role": "Village Herbalist",
+      "region": "Glenbrook Hollow",
+      "personality": ["warm", "cautious", "protective of the village's secrets", "speaks in nature metaphors"],
+      "hidden_knowledge": "Skar did not always lead a bandit clan. Years ago he found a cracked, pulsing red stone -- the Bloodstone Shard -- buried beneath the Old Barrow. It whispers to beasts and twists them fierce and loyal to whoever holds it. The Red Fang Clan is less a bandit gang and more a cult of hunters bound to that stone's will.",
+      "trigger_topic": "bloodstone",
+      "trigger_keywords": ["bloodstone", "red stone", "totem", "why are the wolves", "wolves acting strange", "skar"],
+      "reveal_story_flag": "learned_bloodstone_secret",
+      "rapport_threshold_for_secret": 1,
+      "requires_quest_flag": "reported_wolf_proof_to_garrick",
+      "follow_up_lines": [
+        "\"I've told you what I know of the stone, dear. Beneath the Old Barrow it stayed hidden for a reason -- best it stays a memory now.\"",
+        "\"The Bloodstone's whisper is a hungry thing. Be glad you only heard of it and never had to carry it.\"",
+        "\"Some knowledge is a weight, not a gift. You already carry the weight of what I told you about Skar and that stone.\""
+      ],
+      "epilogue_follow_up_lines": [
+        "\"With Skar gone, I sleep easier. But I still check the tree line some nights, out of habit more than fear.\"",
+        "\"The wolves have gone back to being just wolves, near as I can tell. No more red glint in their eyes. That's your doing.\""
+      ],
+      "epilogue_greeting": "Mira sets down her mortar and pestle and smiles properly, for once. \"There you are. Come in -- the tea's actually good today.\"",
+      "casual_keywords": {
+        "greeting": ["Come in, come in, mind the drying herbs overhead."],
+        "weather": [
+          "The mist rolls in thick this time of year, dear. Good for the swamp-root, bad for these old bones.",
+          "Rain's coming by nightfall, I'd wager -- the moss on the north wall always curls up first."
+        ],
+        "crafting": [
+          "Copper's easy enough to work if you've got oak charcoal hot enough. Bring me hide and I'll show you a poultice recipe.",
+          "Old Ferris does the real forging in this village. I just know which leaves stop a wound from souring."
+        ],
+        "life": [
+          "Oh, I've tended this garden since before Glenbrook had a proper gate. Seen a lot come and go.",
+          "My mother taught me these herbs, and hers before that. Some things in Glenbrook Hollow don't change, thankfully."
+        ],
+        "quest_hint": [
+          "Speak plainly with Garrick before you come asking me things, dear. He knows the wolves better than my herbs do.",
+          "If the Glades feel wrong to you, trust that feeling. Something's stirring beneath the Old Barrow -- I'd start there."
+        ],
+        "village": [
+          "Glenbrook Hollow's smaller than it used to be. Half the old houses past the well stand empty now.",
+          "This village survives on stubbornness more than luck, if you ask me. Always has."
+        ],
+        "opinion_of_player": [
+          "You've got more patience than most who wander through here. That counts for something in my book.",
+          "I trust you more than I did when you first knocked on that door, if that's what you're asking."
+        ],
+        "rumor": [
+          "Heard a trader say the roads past the ridge have gone quiet lately. Can't say if that's good news or not.",
+          "There's talk of red-tinted rabbits near the Glades again. Old omen, that. Keep your eyes open out there."
+        ]
+      },
+      "epilogue_casual_keywords": {
+        "life": [
+          "Funny, I've got more patients coming for scrapes and bruises than poison bites these days. Good problem to have."
+        ],
+        "aftermath": [
+          "The Glades feel lighter now, don't they? Even the birds sound less nervous.",
+          "Whatever that stone was doing to the wolves, it's done. Properly done, thanks to you."
+        ]
+      }
+    },
+    {
+      "npc_id": "garrick_hale",
+      "name": "Garrick Hale",
+      "role": "Retired Glenbrook Militia Woodsman",
+      "region": "Glenbrook Hollow",
+      "personality": ["gruff", "grieving", "protective", "no patience for nonsense"],
+      "hidden_knowledge": "The Red Fang Clan's camp sits past the Old Barrow ridge, hidden behind a deadfall you'd walk right past. Garrick lost half his old patrol to a Red Fang raid there and has marked the entrance in his head ever since, but he's never had the nerve -- or the numbers -- to go back.",
+      "trigger_topic": "red fang camp",
+      "trigger_keywords": ["red fang", "camp location", "where is the camp", "old barrow", "raiders"],
+      "reveal_story_flag": "learned_camp_location",
+      "reveal_spawns_camp": "red_fang_camp",
+      "rapport_threshold_for_secret": 2,
+      "requires_quest_flag": null,
+      "follow_up_lines": [
+        "\"You know where the camp is. Don't make me say it twice -- just go careful.\"",
+        "\"Past the ridge, behind the deadfall. I've told you already. My part's done; the rest is yours.\"",
+        "\"I marked that entrance in my head for years and never had the nerve to go back. You do. Don't waste it.\""
+      ],
+      "epilogue_follow_up_lines": [
+        "\"That camp's just scorched ground now. Feels strange walking past it and not flinching.\"",
+        "\"I went back up to the ridge, after. First time in years. Didn't stay long, but I went.\""
+      ],
+      "epilogue_greeting": "Garrick actually looks up when you approach, something almost like relief on his face. \"Still in one piece, I see. Good.\"",
+      "casual_keywords": {
+        "greeting": ["Hmph. What do you want?"],
+        "weather": [
+          "Storm's coming. Wolves always get bold before a storm.",
+          "Cold snap tonight. Keep a fire going if you're sleeping outside the walls."
+        ],
+        "crafting": [
+          "You want a decent blade, take your copper to Old Ferris at the forge. Don't waste good ore on a dull axe.",
+          "Ferris can work more than blades, if you ask nice. Armor, arrowheads, whatever you're carrying gear for."
+        ],
+        "life": [
+          "Used to run patrols out past the tree line. Different times. Fewer teeth in the dark back then.",
+          "Lost good people out there. Don't ask me to talk about it twice."
+        ],
+        "quest_hint": [
+          "You want to help? Bring me proof the wolves are turning feral for a reason, not just hunger.",
+          "Talk to Mira once you've got something solid. She knows the old stories better than she lets on."
+        ],
+        "village": [
+          "Glenbrook's held on through worse than this. Doesn't mean I like watching it get tested again.",
+          "This village raised me. I'll not see it torn up by something wearing a wolf's face."
+        ],
+        "opinion_of_player": [
+          "You've done more for this place in a few weeks than some folk manage in years. Noted.",
+          "Didn't think much of you at first, I'll admit. I was wrong. That's rare for me."
+        ],
+        "rumor": [
+          "Heard the Old Barrow's been quieter at night. Might mean nothing. Might mean everything.",
+          "Some fool trader's spreading tales about a 'cursed stone' out past the ridge. Wish they'd shut up about it near the children."
+        ]
+      },
+      "epilogue_casual_keywords": {
+        "life": [
+          "Might take up patrols again. Not the same as before, but Glenbrook could use eyes on that tree line."
+        ],
+        "aftermath": [
+          "Camp's cleared, Skar's dead, and the Glades are quiet. Didn't think I'd live to say that.",
+          "Half my old patrol didn't get to see this. I'll carry that. But it's done, and that matters."
+        ]
+      }
+    },
+    {
+      "npc_id": "old_ferris",
+      "name": "Old Ferris",
+      "role": "Glenbrook Blacksmith",
+      "region": "Glenbrook Hollow",
+      "personality": ["gruff but kind", "proud craftsman", "practical", "terrible at small talk"],
+      "casual_keywords": {
+        "greeting": ["Ferris grunts without looking up from the anvil. \"Something broken, or are you just here to talk?\""],
+        "weather": [
+          "Rain plays hell with my bellows. Good day to stay in the forge and work.",
+          "Cold's good for tempering steel, if nothing else."
+        ],
+        "crafting": [
+          "Bring me good copper and hide, I'll turn it into something that doesn't fall apart on you.",
+          "Everyone wants Iron before they've earned Leather. Doesn't work like that, whatever your class."
+        ],
+        "life": [
+          "Been at this anvil since before Garrick had grey in his beard. Not planning to stop.",
+          "Apprenticed under a smith who apprenticed under a smith. That's Glenbrook craft for you."
+        ],
+        "quest_hint": [
+          "You want better gear, bring me materials and patience. Neither of us likes shortcuts.",
+          "Talk to Mira or Garrick if you want quest business. I just make the pointy bits and the armor bits."
+        ],
+        "village": [
+          "Forge's the oldest standing building in Glenbrook besides the well house. Built to last, like everything worth building.",
+          "Half this village has walked through my door needing something mended. I don't mind. Keeps me useful."
+        ],
+        "rumor": [
+          "Heard the roads have been calmer. Good for trade, good for my ore supply.",
+          "Somebody's been asking about a 'shard' with strange heat to it. Can't imagine what that's about."
+        ]
+      },
+      "epilogue_greeting": "Ferris wipes soot from his hands and actually stops working for a moment. \"Well. Heard what you did up at that camp. Come in, don't just stand there.\"",
+      "epilogue_casual_keywords": {
+        "crafting": [
+          "Whatever's in that shard fragment you're carrying runs hot in a way I've never felt from copper or iron. Bring it here and let me study it properly."
+        ]
+      }
+    }
+  ]
+}
