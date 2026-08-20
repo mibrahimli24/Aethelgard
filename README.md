@@ -22,8 +22,8 @@ Aethelgard is an experimental game that explores how an LLM can drive NPC dialog
 1. **Install Godot 4.x** (free, [godotengine.org](https://godotengine.org))
 2. **Clone this repository**:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/gamelol.git
-   cd gamelol
+   git clone https://github.com/YOUR-USERNAME/Aethelgard.git
+   cd Aethelgard
    ```
 3. **Open the project**: Launch Godot and select the `project.godot` file in this directory
 
@@ -48,7 +48,7 @@ Aethelgard is an experimental game that explores how an LLM can drive NPC dialog
 ## Project Structure
 
 ```
-gamelol/
+Aethelgard/
 ├── autoloads/           # Singletons (GameState, GameMaster, EventBus)
 ├── data/                # JSON configs (NPCs, quests, classes, biome data)
 ├── scenes/              # Godot scenes and scripts
