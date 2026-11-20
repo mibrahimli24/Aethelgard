@@ -1,0 +1,1469 @@
+{
+  "world_rect": [
+    -150,
+    -150,
+    12000,
+    9000
+  ],
+  "regions": [
+    {
+      "id": "whispering_glades",
+      "name": "Whispering Glades",
+      "rect": [
+        -150,
+        -150,
+        4000,
+        3000
+      ],
+      "biome": "forest",
+      "level_range": [
+        1,
+        3
+      ],
+      "color": "#4c8a3c",
+      "description": "Gentle oak and pine woods around the village of Glenbrook. Wolves prowl the ridge where the Red Fang clan has made camp.",
+      "enemies": [
+        {
+          "id": "dire_wolf",
+          "weight": 3
+        },
+        {
+          "id": "boar",
+          "weight": 2
+        },
+        {
+          "id": "wisp",
+          "weight": 2
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "glenbrook",
+          "name": "Glenbrook",
+          "type": "village",
+          "pos": [
+            400,
+            400
+          ],
+          "desc": "A quiet village of thatch and lamplight.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 380,
+          "npc_spots": [
+            [
+              296,
+              330
+            ],
+            [
+              214,
+              372
+            ],
+            [
+              372,
+              392
+            ],
+            [
+              318,
+              262
+            ]
+          ]
+        },
+        {
+          "id": "red_fang_camp",
+          "name": "Red Fang Camp",
+          "type": "camp",
+          "pos": [
+            1400,
+            700
+          ],
+          "desc": "A bandit war camp on Old Barrow Ridge.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 300,
+          "npc_spots": [
+            [
+              1440,
+              772
+            ]
+          ]
+        },
+        {
+          "id": "old_barrow",
+          "name": "Old Barrow",
+          "type": "ruin",
+          "pos": [
+            1580,
+            915
+          ],
+          "desc": "A sealed burial mound that glows faintly red.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": [
+            [
+              1580,
+              954
+            ]
+          ]
+        },
+        {
+          "id": "glade_pond",
+          "name": "Glade Pond",
+          "type": "lake",
+          "pos": [
+            880,
+            900
+          ],
+          "desc": "A reed-rimmed pond.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 200,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_village",
+          "name": "Village Waystone",
+          "type": "waystone",
+          "pos": [
+            478,
+            392
+          ],
+          "desc": "Waystone in the village square.",
+          "waystone": true,
+          "waystone_uid": "village",
+          "reveal_radius": 200,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_glade",
+          "name": "Glade Waystone",
+          "type": "waystone",
+          "pos": [
+            908,
+            492
+          ],
+          "desc": "Waystone beside the glade road.",
+          "waystone": true,
+          "waystone_uid": "glade",
+          "reveal_radius": 200,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_ridge",
+          "name": "Ridge Waystone",
+          "type": "waystone",
+          "pos": [
+            1118,
+            598
+          ],
+          "desc": "Waystone at the foot of the ridge.",
+          "waystone": true,
+          "waystone_uid": "ridge",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "thornwood",
+      "name": "Thornwood",
+      "rect": [
+        3850,
+        -150,
+        4000,
+        3000
+      ],
+      "biome": "forest",
+      "level_range": [
+        3,
+        5
+      ],
+      "color": "#2d5a34",
+      "description": "A dense, dark forest of pine and thorn. The canopy swallows the sun and something old watches from the trees.",
+      "enemies": [
+        {
+          "id": "shadow_wolf",
+          "weight": 4
+        },
+        {
+          "id": "dire_wolf",
+          "weight": 2
+        },
+        {
+          "id": "boar",
+          "weight": 1
+        },
+        {
+          "id": "bone_soldier",
+          "weight": 1
+        },
+        {
+          "id": "wisp",
+          "weight": 2
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "thornwood_lodge",
+          "name": "Thornwood Lodge",
+          "type": "camp",
+          "pos": [
+            5300,
+            900
+          ],
+          "desc": "A ranger lodge hidden under black pines.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 360,
+          "npc_spots": [
+            [
+              5300,
+              864
+            ]
+          ]
+        },
+        {
+          "id": "moonwell",
+          "name": "The Moonwell",
+          "type": "shrine",
+          "pos": [
+            6600,
+            1700
+          ],
+          "desc": "A druid shrine where a pale spring glows at night.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 300,
+          "npc_spots": [
+            [
+              6600,
+              1762
+            ]
+          ]
+        },
+        {
+          "id": "hollow_ruins",
+          "name": "Hollow Ruins",
+          "type": "ruin",
+          "pos": [
+            4500,
+            2100
+          ],
+          "desc": "Crumbled walls of a forgotten hall.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "spider_den",
+          "name": "Spider Den",
+          "type": "cave",
+          "pos": [
+            5900,
+            2350
+          ],
+          "desc": "A webbed cave mouth. Something skitters within.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "old_watchtower",
+          "name": "Old Watchtower",
+          "type": "tower",
+          "pos": [
+            7000,
+            500
+          ],
+          "desc": "A leaning stone watchtower.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_thornwood",
+          "name": "Thornwood Waystone",
+          "type": "waystone",
+          "pos": [
+            5230,
+            990
+          ],
+          "desc": "Waystone by the lodge.",
+          "waystone": true,
+          "waystone_uid": "thornwood",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "hollow_peaks",
+      "name": "Hollow Peaks",
+      "rect": [
+        7850,
+        -150,
+        4000,
+        3000
+      ],
+      "biome": "snow",
+      "level_range": [
+        6,
+        8
+      ],
+      "color": "#b8c8d8",
+      "description": "Wind-scoured snow mountains. Pines crouch in drifts and frost bears haunt the passes.",
+      "enemies": [
+        {
+          "id": "snow_wolf",
+          "weight": 4
+        },
+        {
+          "id": "frost_bear",
+          "weight": 2
+        },
+        {
+          "id": "ice_wisp",
+          "weight": 2
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "frostwatch_outpost",
+          "name": "Frostwatch Outpost",
+          "type": "camp",
+          "pos": [
+            9300,
+            1200
+          ],
+          "desc": "A palisade outpost watching the pass.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 340,
+          "npc_spots": [
+            [
+              9300,
+              1174
+            ]
+          ]
+        },
+        {
+          "id": "hermit_cave",
+          "name": "Hermit Cave",
+          "type": "cave",
+          "pos": [
+            10800,
+            420
+          ],
+          "desc": "A cave where a recluse keeps a fire burning.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": [
+            [
+              10800,
+              470
+            ]
+          ]
+        },
+        {
+          "id": "frozen_lake",
+          "name": "Frozen Lake",
+          "type": "lake",
+          "pos": [
+            10300,
+            1800
+          ],
+          "desc": "A wide sheet of black ice.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 300,
+          "npc_spots": []
+        },
+        {
+          "id": "rimefang_den",
+          "name": "Rimefang Den",
+          "type": "dungeon",
+          "pos": [
+            11000,
+            2350
+          ],
+          "desc": "A bear den ringed with bones.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "summit_shrine",
+          "name": "Summit Shrine",
+          "type": "shrine",
+          "pos": [
+            9800,
+            320
+          ],
+          "desc": "A ring of standing stones in the snow.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 240,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_hollow_peaks",
+          "name": "Frostwatch Waystone",
+          "type": "waystone",
+          "pos": [
+            9210,
+            1280
+          ],
+          "desc": "Waystone inside the palisade.",
+          "waystone": true,
+          "waystone_uid": "hollow_peaks",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "highmeadow",
+      "name": "Highmeadow",
+      "rect": [
+        -150,
+        2850,
+        4000,
+        3000
+      ],
+      "biome": "meadow",
+      "level_range": [
+        2,
+        4
+      ],
+      "color": "#b5b84a",
+      "description": "Rolling farmland and golden meadow. Kingsford, the great market town, keeps the roads safe. Mostly.",
+      "enemies": [
+        {
+          "id": "boar",
+          "weight": 3
+        },
+        {
+          "id": "dire_wolf",
+          "weight": 2
+        },
+        {
+          "id": "highway_bandit",
+          "weight": 2
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "kingsford",
+          "name": "Kingsford",
+          "type": "village",
+          "pos": [
+            1800,
+            4300
+          ],
+          "desc": "The market hub of the realm: an inn, a hall and a busy square.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 420,
+          "npc_spots": [
+            [
+              1630,
+              4272
+            ],
+            [
+              1800,
+              4174
+            ],
+            [
+              1890,
+              4350
+            ]
+          ]
+        },
+        {
+          "id": "harvest_farm",
+          "name": "Harvest Farm",
+          "type": "village",
+          "pos": [
+            600,
+            3500
+          ],
+          "desc": "A prosperous farm with wheat fields and a great barn.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 320,
+          "npc_spots": [
+            [
+              600,
+              3526
+            ]
+          ]
+        },
+        {
+          "id": "old_windmill",
+          "name": "Old Windmill",
+          "type": "landmark",
+          "pos": [
+            2900,
+            3300
+          ],
+          "desc": "A creaking windmill on a hill.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 240,
+          "npc_spots": []
+        },
+        {
+          "id": "bandit_lookout",
+          "name": "Bandit Lookout",
+          "type": "camp",
+          "pos": [
+            3100,
+            5200
+          ],
+          "desc": "A highwayman hideout above the road.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_highmeadow",
+          "name": "Kingsford Waystone",
+          "type": "waystone",
+          "pos": [
+            2040,
+            4450
+          ],
+          "desc": "Waystone at the edge of Kingsford.",
+          "waystone": true,
+          "waystone_uid": "highmeadow",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "ironhold_hills",
+      "name": "Ironhold Hills",
+      "rect": [
+        3850,
+        2850,
+        4000,
+        3000
+      ],
+      "biome": "hills",
+      "level_range": [
+        4,
+        6
+      ],
+      "color": "#8a7a66",
+      "description": "Bare rocky hills scarred by quarries and mines. Iron, coal and stubborn brigands.",
+      "enemies": [
+        {
+          "id": "hill_brigand",
+          "weight": 3
+        },
+        {
+          "id": "rock_golem",
+          "weight": 2
+        },
+        {
+          "id": "dire_wolf",
+          "weight": 1
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "ironhold_quarry",
+          "name": "Ironhold Quarry",
+          "type": "camp",
+          "pos": [
+            5000,
+            3700
+          ],
+          "desc": "A working quarry with a foreman's camp.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 360,
+          "npc_spots": [
+            [
+              4940,
+              3726
+            ]
+          ]
+        },
+        {
+          "id": "deepvein_mine",
+          "name": "Deepvein Mine",
+          "type": "mine",
+          "pos": [
+            6800,
+            3500
+          ],
+          "desc": "A timbered mine mouth, lanterns burning.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 300,
+          "npc_spots": [
+            [
+              6870,
+              3530
+            ]
+          ]
+        },
+        {
+          "id": "dwarven_ruin",
+          "name": "Dwarven Ruin",
+          "type": "ruin",
+          "pos": [
+            5900,
+            5000
+          ],
+          "desc": "Ancient carved halls half buried in scree.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "slag_camp",
+          "name": "Slag Camp",
+          "type": "camp",
+          "pos": [
+            7300,
+            4800
+          ],
+          "desc": "A brigand camp by the slag heaps.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "iron_tarn",
+          "name": "Iron Tarn",
+          "type": "lake",
+          "pos": [
+            4500,
+            5200
+          ],
+          "desc": "A cold rust-coloured tarn.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 240,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_ironhold_hills",
+          "name": "Quarry Waystone",
+          "type": "waystone",
+          "pos": [
+            5080,
+            3730
+          ],
+          "desc": "Waystone at the quarry gate.",
+          "waystone": true,
+          "waystone_uid": "ironhold_hills",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "sunscorch_dunes",
+      "name": "Sunscorch Dunes",
+      "rect": [
+        7850,
+        2850,
+        4000,
+        3000
+      ],
+      "biome": "desert",
+      "level_range": [
+        5,
+        7
+      ],
+      "color": "#d9b56a",
+      "description": "An ocean of wind-carved dunes. Bone-dry, blazing by day, deadly at any hour.",
+      "enemies": [
+        {
+          "id": "dune_jackal",
+          "weight": 4
+        },
+        {
+          "id": "giant_scorpion",
+          "weight": 3
+        },
+        {
+          "id": "dust_wraith",
+          "weight": 1
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "dust_bazaar",
+          "name": "Dust Bazaar",
+          "type": "village",
+          "pos": [
+            9300,
+            3900
+          ],
+          "desc": "A market of striped tents in the sand.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 340,
+          "npc_spots": [
+            [
+              9300,
+              3867
+            ]
+          ]
+        },
+        {
+          "id": "oasis_of_tamsin",
+          "name": "Oasis of Tamsin",
+          "type": "landmark",
+          "pos": [
+            10500,
+            4800
+          ],
+          "desc": "Palms and clear water in the wastes.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 300,
+          "npc_spots": [
+            [
+              10620,
+              4828
+            ]
+          ]
+        },
+        {
+          "id": "sun_temple",
+          "name": "Sun Temple",
+          "type": "ruin",
+          "pos": [
+            8500,
+            5200
+          ],
+          "desc": "Pillars of a buried sun temple.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "scorpion_pit",
+          "name": "Scorpion Pit",
+          "type": "dungeon",
+          "pos": [
+            11000,
+            3400
+          ],
+          "desc": "A sand pit crawling with chitin.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_sunscorch_dunes",
+          "name": "Bazaar Waystone",
+          "type": "waystone",
+          "pos": [
+            9410,
+            3960
+          ],
+          "desc": "Waystone at the bazaar.",
+          "waystone": true,
+          "waystone_uid": "sunscorch_dunes",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "stormcoast",
+      "name": "Stormcoast",
+      "rect": [
+        -150,
+        5850,
+        4000,
+        3000
+      ],
+      "biome": "coast",
+      "level_range": [
+        3,
+        5
+      ],
+      "color": "#6fa6b8",
+      "description": "Windy beaches, salt cliffs and a fishing harbor. Crabs skitter and drowned sailors walk the tide line.",
+      "enemies": [
+        {
+          "id": "shore_crab",
+          "weight": 4
+        },
+        {
+          "id": "drowned_sailor",
+          "weight": 2
+        },
+        {
+          "id": "boar",
+          "weight": 1
+        },
+        {
+          "id": "wisp",
+          "weight": 1
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "gull_point_lighthouse",
+          "name": "Gull Point Lighthouse",
+          "type": "tower",
+          "pos": [
+            380,
+            7100
+          ],
+          "desc": "A white-and-red lighthouse on the cliff.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 340,
+          "npc_spots": [
+            [
+              440,
+              7136
+            ]
+          ]
+        },
+        {
+          "id": "driftwood_harbor",
+          "name": "Driftwood Harbor",
+          "type": "harbor",
+          "pos": [
+            2000,
+            8200
+          ],
+          "desc": "A weathered harbor of docks and boats.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 360,
+          "npc_spots": [
+            [
+              1890,
+              8226
+            ]
+          ]
+        },
+        {
+          "id": "wreck_cove",
+          "name": "Wreck Cove",
+          "type": "landmark",
+          "pos": [
+            900,
+            8150
+          ],
+          "desc": "The bones of a wrecked trading ship.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 240,
+          "npc_spots": []
+        },
+        {
+          "id": "tidecaller_cave",
+          "name": "Tidecaller Cave",
+          "type": "cave",
+          "pos": [
+            3200,
+            6500
+          ],
+          "desc": "A sea cave that booms with the tide.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 240,
+          "npc_spots": []
+        },
+        {
+          "id": "smugglers_camp",
+          "name": "Smugglers Camp",
+          "type": "camp",
+          "pos": [
+            3000,
+            7300
+          ],
+          "desc": "A hidden camp full of stolen crates.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_stormcoast",
+          "name": "Harbor Waystone",
+          "type": "waystone",
+          "pos": [
+            2130,
+            8220
+          ],
+          "desc": "Waystone on the harbor road.",
+          "waystone": true,
+          "waystone_uid": "stormcoast",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "gloomfen",
+      "name": "Gloomfen",
+      "rect": [
+        3850,
+        5850,
+        4000,
+        3000
+      ],
+      "biome": "swamp",
+      "level_range": [
+        4,
+        6
+      ],
+      "color": "#4d5c3a",
+      "description": "A drowned wood of black water, glowing fungus and leaning trees. Watch where you step.",
+      "enemies": [
+        {
+          "id": "bog_lurker",
+          "weight": 3
+        },
+        {
+          "id": "bog_boar",
+          "weight": 3
+        },
+        {
+          "id": "wisp",
+          "weight": 3
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "mossfen_hut",
+          "name": "Mossfen Hut",
+          "type": "camp",
+          "pos": [
+            5200,
+            7000
+          ],
+          "desc": "A hermit stilt hut above the mire.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 320,
+          "npc_spots": [
+            [
+              5200,
+              7008
+            ]
+          ]
+        },
+        {
+          "id": "sunken_chapel",
+          "name": "Sunken Chapel",
+          "type": "ruin",
+          "pos": [
+            6800,
+            7800
+          ],
+          "desc": "A half-drowned chapel with a broken bell.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 300,
+          "npc_spots": [
+            [
+              6800,
+              7840
+            ]
+          ]
+        },
+        {
+          "id": "drowned_hollow",
+          "name": "Drowned Hollow",
+          "type": "dungeon",
+          "pos": [
+            4300,
+            6300
+          ],
+          "desc": "A flooded sinkhole lair.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "leech_pools",
+          "name": "Leech Pools",
+          "type": "lake",
+          "pos": [
+            6100,
+            6400
+          ],
+          "desc": "Still green pools thick with leeches.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "toad_mound",
+          "name": "Toad Mound",
+          "type": "cave",
+          "pos": [
+            7200,
+            6500
+          ],
+          "desc": "A mound where giant toads gather.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 240,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_gloomfen",
+          "name": "Mossfen Waystone",
+          "type": "waystone",
+          "pos": [
+            5090,
+            7030
+          ],
+          "desc": "Waystone near the hut.",
+          "waystone": true,
+          "waystone_uid": "gloomfen",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    },
+    {
+      "id": "ashen_wastes",
+      "name": "Ashen Wastes",
+      "rect": [
+        7850,
+        5850,
+        4000,
+        3000
+      ],
+      "biome": "ash",
+      "level_range": [
+        7,
+        10
+      ],
+      "color": "#6a4a42",
+      "description": "Volcanic ash, lava cracks and the ruins of a fallen legion. The most dangerous land in Aethelgard.",
+      "enemies": [
+        {
+          "id": "cinder_hound",
+          "weight": 3
+        },
+        {
+          "id": "ember_golem",
+          "weight": 2
+        },
+        {
+          "id": "ash_wraith",
+          "weight": 3
+        },
+        {
+          "id": "ashen_knight",
+          "weight": 2
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "cinder_ruins",
+          "name": "Cinder Ruins",
+          "type": "ruin",
+          "pos": [
+            9200,
+            7000
+          ],
+          "desc": "A ruined fort where a lone camp smolders.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 340,
+          "npc_spots": [
+            [
+              9260,
+              7030
+            ]
+          ]
+        },
+        {
+          "id": "ember_throne",
+          "name": "Ember Throne",
+          "type": "landmark",
+          "pos": [
+            10700,
+            8000
+          ],
+          "desc": "A dais of obsidian beside a lava pool. A tyrant sits upon it.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 320,
+          "npc_spots": []
+        },
+        {
+          "id": "obsidian_spire",
+          "name": "Obsidian Spire",
+          "type": "tower",
+          "pos": [
+            8400,
+            8000
+          ],
+          "desc": "A black glass spire.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "lava_fields",
+          "name": "Lava Fields",
+          "type": "landmark",
+          "pos": [
+            10500,
+            6400
+          ],
+          "desc": "Rivers of molten stone.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 300,
+          "npc_spots": []
+        },
+        {
+          "id": "legion_camp",
+          "name": "Fallen Legion Camp",
+          "type": "camp",
+          "pos": [
+            11000,
+            7300
+          ],
+          "desc": "Undying soldiers still guard their camp.",
+          "waystone": false,
+          "waystone_uid": "",
+          "reveal_radius": 260,
+          "npc_spots": []
+        },
+        {
+          "id": "waystone_ashen_wastes",
+          "name": "Cinder Waystone",
+          "type": "waystone",
+          "pos": [
+            9090,
+            7040
+          ],
+          "desc": "Waystone within the ruins.",
+          "waystone": true,
+          "waystone_uid": "ashen_wastes",
+          "reveal_radius": 200,
+          "npc_spots": []
+        }
+      ]
+    }
+  ],
+  "roads": [
+    [
+      [
+        350,
+        550
+      ],
+      [
+        380,
+        800
+      ],
+      [
+        520,
+        1300
+      ],
+      [
+        800,
+        1900
+      ],
+      [
+        1100,
+        2500
+      ],
+      [
+        1400,
+        3200
+      ],
+      [
+        1700,
+        3900
+      ],
+      [
+        1800,
+        4300
+      ]
+    ],
+    [
+      [
+        1400,
+        700
+      ],
+      [
+        2000,
+        800
+      ],
+      [
+        2800,
+        1000
+      ],
+      [
+        3700,
+        1000
+      ],
+      [
+        4500,
+        1000
+      ],
+      [
+        5300,
+        900
+      ]
+    ],
+    [
+      [
+        5300,
+        900
+      ],
+      [
+        5800,
+        1300
+      ],
+      [
+        6600,
+        1700
+      ]
+    ],
+    [
+      [
+        5300,
+        900
+      ],
+      [
+        6500,
+        600
+      ],
+      [
+        7600,
+        500
+      ],
+      [
+        8700,
+        900
+      ],
+      [
+        9300,
+        1200
+      ]
+    ],
+    [
+      [
+        9300,
+        1200
+      ],
+      [
+        10000,
+        800
+      ],
+      [
+        10800,
+        420
+      ]
+    ],
+    [
+      [
+        1800,
+        4300
+      ],
+      [
+        1200,
+        3800
+      ],
+      [
+        600,
+        3500
+      ]
+    ],
+    [
+      [
+        1800,
+        4300
+      ],
+      [
+        2800,
+        4200
+      ],
+      [
+        3900,
+        3900
+      ],
+      [
+        5000,
+        3700
+      ],
+      [
+        6800,
+        3500
+      ]
+    ],
+    [
+      [
+        6800,
+        3500
+      ],
+      [
+        8000,
+        3700
+      ],
+      [
+        9300,
+        3900
+      ],
+      [
+        10500,
+        4800
+      ]
+    ],
+    [
+      [
+        1800,
+        4300
+      ],
+      [
+        1700,
+        5200
+      ],
+      [
+        1800,
+        6200
+      ],
+      [
+        1900,
+        7200
+      ],
+      [
+        2000,
+        8200
+      ]
+    ],
+    [
+      [
+        1800,
+        6200
+      ],
+      [
+        1100,
+        6700
+      ],
+      [
+        380,
+        7100
+      ]
+    ],
+    [
+      [
+        1900,
+        7200
+      ],
+      [
+        3000,
+        7000
+      ],
+      [
+        4200,
+        6900
+      ],
+      [
+        5200,
+        7000
+      ]
+    ],
+    [
+      [
+        5200,
+        7000
+      ],
+      [
+        6000,
+        7500
+      ],
+      [
+        6800,
+        7800
+      ]
+    ],
+    [
+      [
+        5200,
+        7000
+      ],
+      [
+        6800,
+        7000
+      ],
+      [
+        8000,
+        7000
+      ],
+      [
+        9200,
+        7000
+      ]
+    ],
+    [
+      [
+        5000,
+        3700
+      ],
+      [
+        5400,
+        5000
+      ],
+      [
+        5200,
+        7000
+      ]
+    ],
+    [
+      [
+        9200,
+        7000
+      ],
+      [
+        10000,
+        7700
+      ],
+      [
+        10700,
+        8000
+      ]
+    ],
+    [
+      [
+        9300,
+        3900
+      ],
+      [
+        9200,
+        5500
+      ],
+      [
+        9200,
+        7000
+      ]
+    ]
+  ]
+}

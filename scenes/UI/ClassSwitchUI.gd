@@ -4,6 +4,8 @@ extends CanvasLayer
 ## GameState.switch_class(), which swaps the active gear set without touching the other
 ## four roles' level/exp entries.
 
+const UiStyle = preload("res://scripts/UiStyle.gd")
+
 const CLASS_IDS := ["swordsman", "bowman", "magic_user", "rogue", "alchemist"]
 
 @onready var panel: Control = $Panel
@@ -13,9 +15,12 @@ var _buttons: Dictionary = {}
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	panel.visible = false
+	(panel as PanelContainer).add_theme_stylebox_override("panel", UiStyle.box())
 	for class_id in CLASS_IDS:
 		var btn: Button = panel.get_node("VBox/%s" % class_id)
 		_buttons[class_id] = btn
+		UiStyle.style_button(btn)
+		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		btn.pressed.connect(_on_class_button_pressed.bind(class_id))
 	EventBus.vitals_changed.connect(_refresh_labels)
 	EventBus.class_changed.connect(func(_new_class_id): _refresh_labels())
@@ -30,6 +35,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _on_class_button_pressed(class_id: String) -> void:
+	Fx.play("click")
 	GameState.switch_class(class_id)
 	panel.visible = false
 
@@ -40,4 +46,6 @@ func _refresh_labels() -> void:
 		var entry: Dictionary = GameState.class_data.get(class_id, {})
 		var display_name: String = def.get("display_name", class_id)
 		var suffix := "  (active)" if class_id == GameState.active_class else ""
-		_buttons[class_id].text = "%s -- Lv.%d%s" % [display_name, int(entry.get("level", 0)), suffix]
+		var special: String = str(def.get("special", {}).get("name", ""))
+		_buttons[class_id].text = "%s  Lv.%d   [%s]%s" % [display_name, int(entry.get("level", 0)), special, suffix]
+		_buttons[class_id].disabled = class_id == GameState.active_class

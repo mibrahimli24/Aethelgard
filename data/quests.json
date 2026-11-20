@@ -8,8 +8,12 @@
         {
           "stage": 0,
           "id": "start",
+          "marker_npc": "garrick_hale",
           "objective": "Speak to Garrick Hale about the recent wolf attacks near Glenbrook Hollow.",
-          "auto_active": true
+          "auto_active": true,
+          "target": {
+            "npc": "garrick_hale"
+          }
         },
         {
           "stage": 1,
@@ -19,37 +23,55 @@
             "type": "kill_count",
             "target": "dire_wolf",
             "count": 3
+          },
+          "target": {
+            "region": "whispering_glades"
           }
         },
         {
           "stage": 2,
           "id": "report_to_garrick",
+          "marker_npc": "garrick_hale",
           "objective": "Return to Garrick Hale with proof of the wolves' unnatural aggression.",
           "advance_condition": {
             "type": "dialogue_flag",
             "npc_id": "garrick_hale",
             "flag": "reported_wolf_proof_to_garrick"
-          }
+          },
+          "target": {
+            "npc": "garrick_hale"
+          },
+          "marker": "?"
         },
         {
           "stage": 3,
           "id": "ask_mira",
+          "marker_npc": "mira_thistlewood",
           "objective": "Ask Mira Thistlewood if she knows why the beasts of the Glades have turned feral.",
           "advance_condition": {
             "type": "dialogue_flag",
             "npc_id": "mira_thistlewood",
             "flag": "learned_bloodstone_secret"
-          }
+          },
+          "target": {
+            "npc": "mira_thistlewood"
+          },
+          "marker": "!"
         },
         {
           "stage": 4,
           "id": "find_camp",
+          "marker_npc": "garrick_hale",
           "objective": "Follow Garrick's directions to the Red Fang Clan camp beyond the Old Barrow ridge.",
           "advance_condition": {
             "type": "dialogue_flag",
             "npc_id": "garrick_hale",
             "flag": "learned_camp_location"
-          }
+          },
+          "target": {
+            "npc": "garrick_hale"
+          },
+          "marker": "?"
         },
         {
           "stage": 5,
@@ -59,6 +81,9 @@
             "type": "kill_count",
             "target": "red_fang_bandit",
             "count": 4
+          },
+          "target": {
+            "landmark": "red_fang_camp"
           }
         },
         {
@@ -69,6 +94,9 @@
             "type": "kill_count",
             "target": "skar",
             "count": 1
+          },
+          "target": {
+            "landmark": "red_fang_camp"
           }
         },
         {
@@ -76,13 +104,19 @@
           "id": "complete",
           "objective": "The Bloodstone Shard's grip on the Glades is broken.",
           "rewards": {
-            "grant_exp": {"amount": 500},
+            "grant_exp": {
+              "amount": 500
+            },
             "give_item": "bloodstone_shard_fragment",
             "unlock_recipe": "iron_tier_swordsman_armor"
           },
           "triggers_game_phase": "Rebuilding_Era"
         }
-      ]
+      ],
+      "tier": "main",
+      "existing_giver": "garrick_hale",
+      "summary": "Something is driving the beasts of the Glades mad. Follow the trail from the wolves to the source.",
+      "region": "whispering_glades"
     },
     {
       "quest_id": "rebuilding_glenbrook",
@@ -93,18 +127,27 @@
         {
           "stage": 0,
           "id": "meet_ferris",
+          "marker_npc": "old_ferris",
           "objective": "Speak with Old Ferris, Glenbrook's blacksmith, now that the Glades are safer.",
-          "auto_active": true
+          "auto_active": true,
+          "target": {
+            "npc": "old_ferris"
+          }
         },
         {
           "stage": 1,
           "id": "bring_shard",
+          "marker_npc": "old_ferris",
           "objective": "Bring Old Ferris the Bloodstone Shard fragment so he can study its strange heat.",
           "advance_condition": {
             "type": "dialogue_flag",
             "npc_id": "old_ferris",
             "flag": "gave_shard_to_ferris"
-          }
+          },
+          "target": {
+            "npc": "old_ferris"
+          },
+          "marker": "?"
         },
         {
           "stage": 2,
@@ -114,6 +157,1227 @@
             "unlock_recipe_for_active_class": "%s_tier2"
           }
         }
+      ],
+      "tier": "main",
+      "existing_giver": "old_ferris",
+      "summary": "With the Glades quieter, Old Ferris wants to study the shard.",
+      "region": "whispering_glades"
+    },
+    {
+      "quest_id": "mira_remedy",
+      "title": "Mira's Remedy",
+      "biome": "The Whispering Glades",
+      "requires_story_flag": "learned_bloodstone_secret",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "gather_herbs",
+          "objective": "Side quest: Gather 3 Healing Herbs for Mira's poultices (glowing herb patches grow across the Glades).",
+          "auto_active": true,
+          "advance_condition": {
+            "type": "have_item",
+            "item": "healing_herb",
+            "count": 3
+          },
+          "target": {
+            "region": "whispering_glades"
+          },
+          "hint": "Healing herbs grow in glowing patches in the Glades, near Glenbrook."
+        },
+        {
+          "stage": 1,
+          "id": "deliver_herbs",
+          "marker_npc": "mira_thistlewood",
+          "objective": "Side quest: Bring the 3 Healing Herbs to Mira Thistlewood (tell her you brought them).",
+          "advance_condition": {
+            "type": "dialogue_flag",
+            "npc_id": "mira_thistlewood",
+            "flag": "delivered_herbs"
+          },
+          "target": {
+            "npc": "mira_thistlewood"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "Mira's shelves are stocked again.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 120
+            },
+            "give_item": "mushroom_stew"
+          }
+        }
+      ],
+      "tier": "side",
+      "existing_giver": "mira_thistlewood",
+      "summary": "Mira is running low on healing herbs.",
+      "region": "whispering_glades"
+    },
+    {
+      "quest_id": "hunters_bounty",
+      "title": "Hunter's Bounty",
+      "biome": "The Whispering Glades",
+      "requires_story_flag": "reported_wolf_proof_to_garrick",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "collect_tusks",
+          "objective": "Side quest: Garrick will pay for 3 Boar Tusks. The boars roam the southern Glades.",
+          "auto_active": true,
+          "advance_condition": {
+            "type": "have_item",
+            "item": "boar_tusk",
+            "count": 3
+          },
+          "target": {
+            "region": "whispering_glades"
+          },
+          "hint": "Boars roam the southern Glades."
+        },
+        {
+          "stage": 1,
+          "id": "deliver_tusks",
+          "marker_npc": "garrick_hale",
+          "objective": "Side quest: Bring the 3 Boar Tusks to Garrick Hale (tell him you brought them).",
+          "advance_condition": {
+            "type": "dialogue_flag",
+            "npc_id": "garrick_hale",
+            "flag": "delivered_tusks"
+          },
+          "target": {
+            "npc": "garrick_hale"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "Garrick has his trophies.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 150
+            },
+            "give_item": "cooked_meat"
+          }
+        }
+      ],
+      "tier": "side",
+      "existing_giver": "garrick_hale",
+      "summary": "Garrick will pay well for boar tusks.",
+      "region": "whispering_glades"
+    },
+    {
+      "quest_id": "wayfarer",
+      "title": "Wayfarer",
+      "tier": "side",
+      "region": "whispering_glades",
+      "summary": "Aethelgard is vast. Press M to open the map and see what lies beyond the Glades.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "see_three",
+          "objective": "Wander beyond the Glades: visit 3 regions of Aethelgard (M opens the map).",
+          "auto_active": true,
+          "advance_condition": {
+            "type": "visit_regions",
+            "count": 3
+          }
+        },
+        {
+          "stage": 1,
+          "id": "see_six",
+          "objective": "Keep travelling: visit 6 regions of Aethelgard.",
+          "advance_condition": {
+            "type": "visit_regions",
+            "count": 6
+          },
+          "rewards": {
+            "grant_exp": {
+              "amount": 150
+            }
+          }
+        },
+        {
+          "stage": 2,
+          "id": "see_all",
+          "objective": "Leave no corner unseen: visit all 9 regions of Aethelgard.",
+          "advance_condition": {
+            "type": "visit_regions",
+            "count": 9
+          },
+          "rewards": {
+            "grant_exp": {
+              "amount": 300
+            }
+          }
+        },
+        {
+          "stage": 3,
+          "id": "complete",
+          "objective": "You have walked every corner of Aethelgard.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 600
+            }
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "pips_berry_promise",
+      "title": "Pip's Berry Promise",
+      "giver": "pip_wren",
+      "region": "whispering_glades",
+      "tier": "side",
+      "pitch": "Pip swears Glenbrook berries make the best pie, and has been promised one by Mira. Bring 5 berries.",
+      "summary": "Pip swears Glenbrook berries make the best pie, and has been promised one by Mira. Bring 5 berries.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "gather",
+          "objective": "Gather 5 Glade Berries for Pip's pie (bushes around Glenbrook).",
+          "advance_condition": {
+            "type": "collect",
+            "item": "berries",
+            "count": 5
+          },
+          "target": {
+            "region": "whispering_glades"
+          },
+          "hint": "Berry bushes grow around the village and the glade path."
+        },
+        {
+          "stage": 1,
+          "id": "deliver",
+          "objective": "Bring the 5 Glade Berries to Pip Wren in Glenbrook.",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "pip_wren",
+            "item": "berries",
+            "count": 5,
+            "consume": true
+          },
+          "target": {
+            "npc": "pip_wren"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "Pip's pie is going to be magnificent.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 60
+            },
+            "give_items": {
+              "honeycomb": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "kings_road",
+      "title": "Clear the Kings Road",
+      "giver": "reeve_corwin_ashby",
+      "region": "highmeadow",
+      "tier": "side",
+      "pitch": "Wolves and boars are troubling travellers on the roads around Kingsford. The Reeve wants them thinned.",
+      "summary": "Wolves and boars are troubling travellers on the roads around Kingsford. The Reeve wants them thinned.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "clear_road",
+          "objective": "Slay 5 beasts on the Highmeadow roads.",
+          "advance_condition": {
+            "type": "kill",
+            "target": "any",
+            "count": 5,
+            "region": "highmeadow"
+          },
+          "target": {
+            "region": "highmeadow"
+          },
+          "hint": "Dire wolves and boars roam the fields. Stay near the roads."
+        },
+        {
+          "stage": 1,
+          "id": "report",
+          "objective": "Report back to Reeve Corwin Ashby in Kingsford.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "reeve_corwin_ashby"
+          },
+          "target": {
+            "npc": "reeve_corwin_ashby"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The roads around Kingsford are safer.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 200
+            },
+            "give_items": {
+              "bread": 3
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        2,
+        4
+      ]
+    },
+    {
+      "quest_id": "larders_empty",
+      "title": "The Inn's Larder",
+      "giver": "bess_hartwell",
+      "region": "highmeadow",
+      "tier": "side",
+      "pitch": "The Hartwell Inn is out of meat and the stew pot is nearly dry. Four portions of cooked meat would save the week.",
+      "summary": "The Hartwell Inn is out of meat and the stew pot is nearly dry. Four portions of cooked meat would save the week.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "bring_meat",
+          "objective": "Bring 4 Cooked Meat to Bess Hartwell at Kingsford (hunt, then cook at a campfire).",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "bess_hartwell",
+            "item": "cooked_meat",
+            "count": 4,
+            "consume": true
+          },
+          "target": {
+            "npc": "bess_hartwell"
+          },
+          "hint": "Kill a boar or wolf for Raw Meat, then cook it over any campfire.",
+          "marker": "?"
+        },
+        {
+          "stage": 1,
+          "id": "complete",
+          "objective": "The Inn is open and smelling wonderful.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 140
+            },
+            "give_items": {
+              "cheese": 2,
+              "bread": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "songs_of_the_shard",
+      "title": "Songs of the Bloodstone",
+      "giver": "lark_the_bard",
+      "region": "highmeadow",
+      "tier": "side",
+      "pitch": "Lark is writing a ballad about the Bloodstone and wants the real story from those who lived it.",
+      "summary": "Lark is writing a ballad about the Bloodstone and wants the real story from those who lived it.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "ask_ferris",
+          "objective": "Ask Old Ferris in Glenbrook what he remembers of the Bloodstone.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "old_ferris"
+          },
+          "target": {
+            "npc": "old_ferris"
+          },
+          "marker": "!"
+        },
+        {
+          "stage": 1,
+          "id": "ask_mira",
+          "objective": "Ask Mira Thistlewood for her side of the tale.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "mira_thistlewood"
+          },
+          "target": {
+            "npc": "mira_thistlewood"
+          },
+          "marker": "!"
+        },
+        {
+          "stage": 2,
+          "id": "sing",
+          "objective": "Return to Lark in Kingsford with the stories.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "lark_the_bard"
+          },
+          "target": {
+            "npc": "lark_the_bard"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 3,
+          "id": "complete",
+          "objective": "Lark has a ballad worth singing.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 220
+            },
+            "give_items": {
+              "ancient_coin": 1
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        2,
+        5
+      ]
+    },
+    {
+      "quest_id": "harvest_pests",
+      "title": "Pests in the Barley",
+      "giver": "old_maud_fennick",
+      "region": "highmeadow",
+      "tier": "side",
+      "pitch": "Something is rooting up Maud's barley at night. She wants it gone.",
+      "summary": "Something is rooting up Maud's barley at night. She wants it gone.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "hunt",
+          "objective": "Drive off 4 boars near the harvest farm.",
+          "advance_condition": {
+            "type": "kill",
+            "target": "boar",
+            "count": 4
+          },
+          "target": {
+            "landmark": "harvest_farm"
+          },
+          "hint": "Boars wander the meadows."
+        },
+        {
+          "stage": 1,
+          "id": "report",
+          "objective": "Tell Old Maud Fennick the fields are safe.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "old_maud_fennick"
+          },
+          "target": {
+            "npc": "old_maud_fennick"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The barley is safe again.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 170
+            },
+            "give_items": {
+              "cheese": 2,
+              "honeycomb": 1
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        2,
+        4
+      ]
+    },
+    {
+      "quest_id": "thorn_patrol",
+      "title": "Thornwood Patrol",
+      "giver": "sylas_underbough",
+      "region": "thornwood",
+      "tier": "side",
+      "pitch": "Sylas needs the dark paths of Thornwood scouted and cleared of whatever stalks them.",
+      "summary": "Sylas needs the dark paths of Thornwood scouted and cleared of whatever stalks them.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "scout",
+          "objective": "Reach the Moonwell shrine deep in Thornwood.",
+          "advance_condition": {
+            "type": "reach",
+            "landmark": "moonwell",
+            "radius": 220
+          },
+          "target": {
+            "landmark": "moonwell"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "clear",
+          "objective": "Slay 5 creatures of Thornwood.",
+          "advance_condition": {
+            "type": "kill",
+            "target": "any",
+            "count": 5,
+            "region": "thornwood"
+          },
+          "target": {
+            "region": "thornwood"
+          }
+        },
+        {
+          "stage": 2,
+          "id": "report",
+          "objective": "Report to Sylas Underbough at the lodge.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "sylas_underbough"
+          },
+          "target": {
+            "npc": "sylas_underbough"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 3,
+          "id": "complete",
+          "objective": "Thornwood feels a little less hungry.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 320
+            },
+            "give_items": {
+              "amber": 1,
+              "healing_herb": 3
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        3,
+        5
+      ]
+    },
+    {
+      "quest_id": "moonwell_rite",
+      "title": "The Moonwell Rite",
+      "giver": "elowen_moonsong",
+      "region": "thornwood",
+      "tier": "side",
+      "pitch": "Elowen needs pine resin to keep the moonwell lanterns burning through the dark months.",
+      "summary": "Elowen needs pine resin to keep the moonwell lanterns burning through the dark months.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "resin",
+          "objective": "Collect 3 Pine Resin from the pines of Thornwood.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "pine_resin",
+            "count": 3
+          },
+          "target": {
+            "region": "thornwood"
+          },
+          "hint": "Pines ooze resin across Thornwood and the Hollow Peaks."
+        },
+        {
+          "stage": 1,
+          "id": "deliver",
+          "objective": "Bring the resin to Elowen Moonsong at the moonwell.",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "elowen_moonsong",
+            "item": "pine_resin",
+            "count": 3,
+            "consume": true
+          },
+          "target": {
+            "npc": "elowen_moonsong"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The moonwell lanterns burn bright.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 240
+            },
+            "give_items": {
+              "glowcap": 2,
+              "healing_herb": 2
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        3,
+        5
+      ]
+    },
+    {
+      "quest_id": "watch_the_pass",
+      "title": "Watch the Pass",
+      "giver": "captain_ysolde_varn",
+      "region": "hollow_peaks",
+      "tier": "side",
+      "pitch": "Frostwatch is short of hands and long on wolves. Captain Varn wants the pass cleared.",
+      "summary": "Frostwatch is short of hands and long on wolves. Captain Varn wants the pass cleared.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "clear",
+          "objective": "Slay 6 creatures in the Hollow Peaks.",
+          "advance_condition": {
+            "type": "kill",
+            "target": "any",
+            "count": 6,
+            "region": "hollow_peaks"
+          },
+          "target": {
+            "region": "hollow_peaks"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "report",
+          "objective": "Report to Captain Ysolde Varn at Frostwatch Outpost.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "captain_ysolde_varn"
+          },
+          "target": {
+            "npc": "captain_ysolde_varn"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The pass is held another season.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 520
+            },
+            "give_items": {
+              "frost_fang": 1,
+              "cooked_meat": 3
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        6,
+        8
+      ]
+    },
+    {
+      "quest_id": "hermits_bloom",
+      "title": "The Hermit's Bloom",
+      "giver": "brannoch_the_hermit",
+      "region": "hollow_peaks",
+      "tier": "side",
+      "pitch": "Brannoch has not had a fever-free night in weeks. Frost blooms would settle it.",
+      "summary": "Brannoch has not had a fever-free night in weeks. Frost blooms would settle it.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "bloom",
+          "objective": "Gather 2 Frost Blooms from the deep snow of the Hollow Peaks.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "frost_bloom",
+            "count": 2
+          },
+          "target": {
+            "region": "hollow_peaks"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "deliver",
+          "objective": "Bring the Frost Blooms to Brannoch the Hermit.",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "brannoch_the_hermit",
+            "item": "frost_bloom",
+            "count": 2,
+            "consume": true
+          },
+          "target": {
+            "npc": "brannoch_the_hermit"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "Brannoch shares a rare keepsake.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 420
+            },
+            "give_items": {
+              "obsidian_shard": 1
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        6,
+        8
+      ]
+    },
+    {
+      "quest_id": "ore_for_the_forge",
+      "title": "Ore for the Forge",
+      "giver": "dorn_ashvale",
+      "region": "ironhold_hills",
+      "tier": "side",
+      "pitch": "The quarry forges are cold. Dorn needs raw iron ore.",
+      "summary": "The quarry forges are cold. Dorn needs raw iron ore.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "ore",
+          "objective": "Gather 5 Iron Ore around Ironhold Hills.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "iron_ore",
+            "count": 5
+          },
+          "target": {
+            "region": "ironhold_hills"
+          },
+          "hint": "Rocky outcrops hold ore patches."
+        },
+        {
+          "stage": 1,
+          "id": "deliver",
+          "objective": "Deliver the ore to Dorn Ashvale at the quarry.",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "dorn_ashvale",
+            "item": "iron_ore",
+            "count": 5,
+            "consume": true
+          },
+          "target": {
+            "npc": "dorn_ashvale"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The quarry forges roar again.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 340
+            },
+            "give_items": {
+              "coal": 3,
+              "cooked_meat": 2
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        4,
+        6
+      ]
+    },
+    {
+      "quest_id": "deepvein_trouble",
+      "title": "Deepvein Trouble",
+      "giver": "hilde_coppergate",
+      "region": "ironhold_hills",
+      "tier": "side",
+      "pitch": "Something is tormenting the miners at Deepvein. Hilde wants it stopped.",
+      "summary": "Something is tormenting the miners at Deepvein. Hilde wants it stopped.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "clear",
+          "objective": "Slay 5 creatures prowling Ironhold Hills.",
+          "advance_condition": {
+            "type": "kill",
+            "target": "any",
+            "count": 5,
+            "region": "ironhold_hills"
+          },
+          "target": {
+            "region": "ironhold_hills"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "report",
+          "objective": "Tell Hilde Coppergate at Deepvein Mine it is safe.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "hilde_coppergate"
+          },
+          "target": {
+            "npc": "hilde_coppergate"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The miners can breathe again.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 360
+            },
+            "give_items": {
+              "iron_ore": 2,
+              "mushroom_stew": 1
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        4,
+        6
+      ]
+    },
+    {
+      "quest_id": "bazaar_goods",
+      "title": "Bazaar Goods",
+      "giver": "zahra_qasim",
+      "region": "sunscorch_dunes",
+      "tier": "side",
+      "pitch": "Zahra pays fairly for scorpion chitin. Bring her three pieces.",
+      "summary": "Zahra pays fairly for scorpion chitin. Bring her three pieces.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "chitin",
+          "objective": "Collect 3 Scorpion Chitin from dune scorpions.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "scorpion_chitin",
+            "count": 3
+          },
+          "target": {
+            "region": "sunscorch_dunes"
+          },
+          "hint": "Dune scorpions drop chitin."
+        },
+        {
+          "stage": 1,
+          "id": "deliver",
+          "objective": "Sell the chitin to Zahra Qasim at the Dust Bazaar.",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "zahra_qasim",
+            "item": "scorpion_chitin",
+            "count": 3,
+            "consume": true
+          },
+          "target": {
+            "npc": "zahra_qasim"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "A fair price, fairly paid.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 420
+            },
+            "give_items": {
+              "sun_date": 3,
+              "ancient_coin": 1
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        5,
+        7
+      ]
+    },
+    {
+      "quest_id": "oasis_watch",
+      "title": "Oasis Watch",
+      "giver": "tamsin_the_well_keeper",
+      "region": "sunscorch_dunes",
+      "tier": "side",
+      "pitch": "Raiders of the dunes are stealing the oasis water. Tamsin has had enough.",
+      "summary": "Raiders of the dunes are stealing the oasis water. Tamsin has had enough.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "clear",
+          "objective": "Slay 5 creatures of the Sunscorch Dunes.",
+          "advance_condition": {
+            "type": "kill",
+            "target": "any",
+            "count": 5,
+            "region": "sunscorch_dunes"
+          },
+          "target": {
+            "region": "sunscorch_dunes"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "report",
+          "objective": "Return to Tamsin at the oasis.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "tamsin_the_well_keeper"
+          },
+          "target": {
+            "npc": "tamsin_the_well_keeper"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The oasis is safe.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 400
+            },
+            "give_items": {
+              "cactus_fruit": 3,
+              "sun_date": 2
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        5,
+        7
+      ]
+    },
+    {
+      "quest_id": "keep_the_light",
+      "title": "Keep the Light",
+      "giver": "odo_saltmarsh",
+      "region": "stormcoast",
+      "tier": "side",
+      "pitch": "Odo says kelp broth keeps a lighthouse keeper warm through storms. He asks for sea kelp.",
+      "summary": "Odo says kelp broth keeps a lighthouse keeper warm through storms. He asks for sea kelp.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "kelp",
+          "objective": "Gather 4 Sea Kelp from the Stormcoast shore.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "sea_kelp",
+            "count": 4
+          },
+          "target": {
+            "region": "stormcoast"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "deliver",
+          "objective": "Bring the kelp to Odo Saltmarsh at Gull Point.",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "odo_saltmarsh",
+            "item": "sea_kelp",
+            "count": 4,
+            "consume": true
+          },
+          "target": {
+            "npc": "odo_saltmarsh"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The light burns on.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 210
+            },
+            "give_items": {
+              "pearl_shell": 1,
+              "cooked_meat": 1
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        3,
+        5
+      ]
+    },
+    {
+      "quest_id": "harbor_pearls",
+      "title": "Nell's Pearls",
+      "giver": "nell_tidewater",
+      "region": "stormcoast",
+      "tier": "side",
+      "pitch": "Nell trades in pearl shells. Two of them would fund her new nets.",
+      "summary": "Nell trades in pearl shells. Two of them would fund her new nets.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "shells",
+          "objective": "Collect 2 Pearl Shells from the Stormcoast shallows.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "pearl_shell",
+            "count": 2
+          },
+          "target": {
+            "region": "stormcoast"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "deliver",
+          "objective": "Bring the shells to Nell Tidewater at Driftwood Harbor.",
+          "advance_condition": {
+            "type": "deliver",
+            "npc": "nell_tidewater",
+            "item": "pearl_shell",
+            "count": 2,
+            "consume": true
+          },
+          "target": {
+            "npc": "nell_tidewater"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "Nell is delighted.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 230
+            },
+            "give_items": {
+              "river_trout": 3
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        3,
+        5
+      ]
+    },
+    {
+      "quest_id": "swamp_brew",
+      "title": "Swamp Brew",
+      "giver": "marrow_vane",
+      "region": "gloomfen",
+      "tier": "side",
+      "pitch": "Marrow Vane brews things others fear. She needs bog lilies and glowcaps, fresh.",
+      "summary": "Marrow Vane brews things others fear. She needs bog lilies and glowcaps, fresh.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "herbs",
+          "objective": "Gather 3 Bog Lilies and 2 Glowcaps from Gloomfen.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "bog_lily",
+            "count": 3
+          },
+          "target": {
+            "region": "gloomfen"
+          },
+          "hint": "Both grow in the mist of the fen."
+        },
+        {
+          "stage": 1,
+          "id": "caps",
+          "objective": "Gather 2 Glowcaps from Gloomfen.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "glowcap",
+            "count": 2
+          },
+          "target": {
+            "region": "gloomfen"
+          }
+        },
+        {
+          "stage": 2,
+          "id": "deliver",
+          "objective": "Bring the ingredients to Marrow Vane at her hut.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "marrow_vane"
+          },
+          "target": {
+            "npc": "marrow_vane"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 3,
+          "id": "complete",
+          "objective": "Marrow is pleased.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 380
+            },
+            "give_items": {
+              "healing_herb": 3,
+              "mushroom_stew": 2
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        4,
+        6
+      ]
+    },
+    {
+      "quest_id": "quiet_the_chapel",
+      "title": "Quiet the Chapel",
+      "giver": "brother_alder",
+      "region": "gloomfen",
+      "tier": "side",
+      "pitch": "The dead of the sunken chapel will not lie still. Brother Alder asks for bone dust to consecrate the ground.",
+      "summary": "The dead of the sunken chapel will not lie still. Brother Alder asks for bone dust to consecrate the ground.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "clear",
+          "objective": "Slay 4 creatures of Gloomfen.",
+          "advance_condition": {
+            "type": "kill",
+            "target": "any",
+            "count": 4,
+            "region": "gloomfen"
+          },
+          "target": {
+            "region": "gloomfen"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "report",
+          "objective": "Return to Brother Alder at the sunken chapel.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "brother_alder"
+          },
+          "target": {
+            "npc": "brother_alder"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 2,
+          "id": "complete",
+          "objective": "The chapel bells sound clear for the first time in years.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 390
+            },
+            "give_items": {
+              "bone_dust": 2,
+              "glowcap": 2
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        4,
+        6
+      ]
+    },
+    {
+      "quest_id": "obsidian_studies",
+      "title": "Obsidian Studies",
+      "giver": "ignatius_vale",
+      "region": "ashen_wastes",
+      "tier": "side",
+      "pitch": "Ignatius studies what the ash remembers. Sulfur and obsidian would help enormously.",
+      "summary": "Ignatius studies what the ash remembers. Sulfur and obsidian would help enormously.",
+      "stages": [
+        {
+          "stage": 0,
+          "id": "sulfur",
+          "objective": "Collect 3 Sulfur from the Ashen Wastes.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "sulfur",
+            "count": 3
+          },
+          "target": {
+            "region": "ashen_wastes"
+          }
+        },
+        {
+          "stage": 1,
+          "id": "obsidian",
+          "objective": "Collect 2 Obsidian Shards.",
+          "advance_condition": {
+            "type": "collect",
+            "item": "obsidian_shard",
+            "count": 2
+          },
+          "target": {
+            "region": "ashen_wastes"
+          }
+        },
+        {
+          "stage": 2,
+          "id": "deliver",
+          "objective": "Bring the samples to Ignatius Vale at Cinder Ruins.",
+          "advance_condition": {
+            "type": "talk",
+            "npc": "ignatius_vale"
+          },
+          "target": {
+            "npc": "ignatius_vale"
+          },
+          "marker": "?"
+        },
+        {
+          "stage": 3,
+          "id": "complete",
+          "objective": "Ignatius scribbles furiously.",
+          "rewards": {
+            "grant_exp": {
+              "amount": 900
+            },
+            "give_items": {
+              "ember_core": 1,
+              "ancient_coin": 2
+            }
+          }
+        }
+      ],
+      "level_hint": [
+        7,
+        10
       ]
     }
   ]

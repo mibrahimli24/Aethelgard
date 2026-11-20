@@ -15,7 +15,11 @@ Aethelgard is an experimental game that explores how an LLM can drive NPC dialog
 - **Equipment progression**: Unlock and craft tiered gear for all 5 classes via quest rewards
 - **Mocked LLM backend**: Deterministic, rule-based dialogue system (keyword matching, rapport counters, lore generation) shaped exactly like a real Anthropic API contract — ready for live integration later
 - **Persistent saves**: JSON-file autosave + close-on-quit persistence
-- **Graphics polish**: Atmosphere tinting, decorative environment props, per-NPC color differentiation, hit-flash effects, death-burst particles
+- **Living world**: village with houses, well, lamps and paths; forest, ridge and pond; day/night cycle with lighting, fireflies, night wisps, wandering deer and rabbits
+- **Combat feel**: dodge with i-frames, per-class special abilities, hit-stop, screen shake, archers, boars, wisps, and a multi-phase boss; wild spawns scale with level
+- **Survival & loot**: foraging, hunting drops, campfire cooking, chests, waystones, food that restores hunger and HP
+- **Polished UI**: HUD with minimap, hotbar, toasts and boss bar; satchel, pause menu, typewriter dialogue
+- **Procedural audio**: all sound effects are generated in code (no asset files); press M to mute
 
 ## Installation
 
@@ -30,10 +34,12 @@ Aethelgard is an experimental game that explores how an LLM can drive NPC dialog
 ## How to Play
 
 - **Movement**: WASD or arrow keys
-- **Attack**: Space (melee) or click to aim ranged attacks
+- **Attack**: Space (ranged classes aim in their facing direction)
+- **Special / Dodge / Eat**: Q / Shift / F
 - **Interact**: E (talk to NPCs, interact with quest markers)
-- **Class Switch**: Tab (opens class selector)
-- **Inventory**: I (view items and craft equipment)
+- **Class Switch**: C (opens class selector)
+- **Pause**: Esc (save, sound toggle, quit)
+- **Satchel**: I (items, eating, crafting, stats)
 - **Dialogue**: Type responses or press Enter for default greetings
 
 ### Quest Line
@@ -49,14 +55,17 @@ Aethelgard is an experimental game that explores how an LLM can drive NPC dialog
 
 ```
 Aethelgard/
-├── autoloads/           # Singletons (GameState, GameMaster, EventBus)
+├── autoloads/           # Singletons (GameState, GameMaster, EventBus, Fx)
 ├── data/                # JSON configs (NPCs, quests, classes, biome data)
 ├── scenes/              # Godot scenes and scripts
-│   ├── World.*          # Main level/map
+│   ├── World.*          # Main level: decor, day/night, spawner, camp
+│   ├── Interactable.*   # Campfires, chests, waystones, forage nodes
+│   ├── Critter.gd       # Ambient wildlife
 │   ├── Player.*         # Player character
 │   ├── Enemy.*, Boss.*  # Hostile creatures
 │   ├── NPC.*            # Interactable NPCs
 │   └── UI/              # HUD, dialogue, inventory, class switcher
+├── scripts/             # Art builders, world decor, UI style
 ├── project.godot        # Godot project config
 ├── handoff.md           # Detailed session notes (see for implementation details)
 └── .gitignore           # Git ignore patterns
@@ -71,32 +80,28 @@ Aethelgard/
 ✅ Combat: melee, ranged, crit chances, class-specific stats
 ✅ Survival: HP, hunger, speed scaling
 ✅ Persistent saves (autosave + close-quit save)
-✅ Graphics: atmosphere, decorative props, hit effects, death particles
+✅ Graphics: procedural art, day/night lighting, particles, HUD/minimap
+✅ Procedural audio, pause menu, foraging/cooking/loot
+✅ Large 3x3 region world (12000x9000) with 38 landmarks, lazily streamed
+✅ Player guidance, world map, item info panels, token-free NPC conversations
+✅ Animated characters (walk/attack/roll/hurt, NPC work gestures, critters)
 
 ## What's Not Yet Implemented
 
 - Real Anthropic API integration (scaffolding exists; see `GameMaster.gd` for the `USE_REAL_API` seam)
-- Additional biomes (Sunken Coast, etc.)
 - Sprite art (currently all polygon primitives)
 - Save-slot UI (one fixed save file)
-- Deeper inventory/consumables system
 
 ## Development Notes
 
 See **[handoff.md](./handoff.md)** for:
 - Detailed session-by-session progress
-- Known risks and untested areas (nothing in session 3 has been verified in the editor yet)
+- Known risks and untested areas (session 4 was verified headlessly and by screenshots, not by a long human playtest)
 - Suggested next steps prioritized by impact
 
-### Important: Godot Not Installed on Dev Machine
+### Verification status
 
-This codebase was written without Godot running locally. **Please verify it runs correctly** on your end:
-- Both quests load and progress properly
-- The Rebuilding Era phase transition fires after the boss fight
-- Old Ferris's dialogue and shard turn-in work for all 5 classes
-- Graphics additions render without errors (torch glow, NPC colors, facing indicator, hit-flash, death burst)
-
-Report any errors or odd behavior via the repo's Issues page.
+The project boots cleanly on Godot 4.7 and a scripted smoke test covered combat, interactables, class switching, saves and quest stages. Balance and feel still need a human playtest; please report anything odd via Issues.
 
 ## Architecture Highlights
 

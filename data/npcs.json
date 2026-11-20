@@ -1,15 +1,27 @@
 {
-  "region": "Glenbrook Hollow, The Whispering Glades",
+  "region": "The Realm of Aethelgard",
   "npcs": [
     {
       "npc_id": "mira_thistlewood",
       "name": "Mira Thistlewood",
       "role": "Village Herbalist",
       "region": "Glenbrook Hollow",
-      "personality": ["warm", "cautious", "protective of the village's secrets", "speaks in nature metaphors"],
+      "personality": [
+        "warm",
+        "cautious",
+        "protective of the village's secrets",
+        "speaks in nature metaphors"
+      ],
       "hidden_knowledge": "Skar did not always lead a bandit clan. Years ago he found a cracked, pulsing red stone -- the Bloodstone Shard -- buried beneath the Old Barrow. It whispers to beasts and twists them fierce and loyal to whoever holds it. The Red Fang Clan is less a bandit gang and more a cult of hunters bound to that stone's will.",
       "trigger_topic": "bloodstone",
-      "trigger_keywords": ["bloodstone", "red stone", "totem", "why are the wolves", "wolves acting strange", "skar"],
+      "trigger_keywords": [
+        "bloodstone",
+        "red stone",
+        "totem",
+        "why are the wolves",
+        "wolves acting strange",
+        "skar"
+      ],
       "reveal_story_flag": "learned_bloodstone_secret",
       "rapport_threshold_for_secret": 1,
       "requires_quest_flag": "reported_wolf_proof_to_garrick",
@@ -24,7 +36,9 @@
       ],
       "epilogue_greeting": "Mira sets down her mortar and pestle and smiles properly, for once. \"There you are. Come in -- the tea's actually good today.\"",
       "casual_keywords": {
-        "greeting": ["Come in, come in, mind the drying herbs overhead."],
+        "greeting": [
+          "Come in, come in, mind the drying herbs overhead."
+        ],
         "weather": [
           "The mist rolls in thick this time of year, dear. Good for the swamp-root, bad for these old bones.",
           "Rain's coming by nightfall, I'd wager -- the moss on the north wall always curls up first."
@@ -62,17 +76,108 @@
           "The Glades feel lighter now, don't they? Even the birds sound less nervous.",
           "Whatever that stone was doing to the wolves, it's done. Properly done, thanks to you."
         ]
-      }
+      },
+      "aliases": [
+        "mira",
+        "the herbalist",
+        "herbalist",
+        "thistlewood"
+      ],
+      "speech_style": "warm",
+      "home": {
+        "region": "whispering_glades",
+        "landmark": "glenbrook"
+      },
+      "knows": {
+        "regions": [
+          "whispering_glades",
+          "thornwood",
+          "highmeadow"
+        ],
+        "npcs": [
+          "garrick_hale",
+          "old_ferris",
+          "pip_wren",
+          "elowen_moonsong",
+          "lark_the_bard"
+        ]
+      },
+      "blurb": "Mira keeps the herb garden behind the well and knows every poultice in the Glades.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Come in, come in, mind the drying herbs overhead. I am Mira, the village herbalist."
+      ],
+      "opinions": {
+        "garrick_hale": "Garrick? A good man with a bad temper and a worse conscience. He blames himself for his lost patrol. Be patient with him.",
+        "old_ferris": "Ferris mends everything in this village, including, I suspect, a few hearts. Do not tell him I said so.",
+        "pip_wren": "Pip is a menace and a delight in equal parts. The child has promised everyone a pie and baked none of them yet.",
+        "elowen_moonsong": "Elowen keeps the old well in Thornwood. We trade moss and lantern oil, and we share the same stubborn faith in slow things."
+      },
+      "topic_lines": {
+        "healing": [
+          "Willow bark for fever, yarrow for cuts, healing herb for nearly everything else. Keep a few leaves in your satchel and you will outlast most heroes.",
+          "A wound kept clean heals twice as fast. Wash it, bind it, and do not poke it. That is the whole secret, and no one believes me."
+        ],
+        "food": [
+          "Berries and herbs fill a pan better than you would think. Cook meat at a fire, never eat it raw, and your stomach will thank you.",
+          "Hunger is the quiet killer out there. Eat before you are hungry, not after."
+        ],
+        "magic": [
+          "The Glades hum a little under the old stones. I call it the land remembering. Others call it magic and run for the hills.",
+          "I am no mage, dear, only a gardener who listens. Plants do not lie about what is wrong with the soil."
+        ],
+        "animals": [
+          "Beasts only turn feral for a reason. Hunger, fear, or something whispering in their heads. Find the reason and the wolf is a wolf again.",
+          "Rabbits are the first to know. A red-tinted one near the Glades is a very old omen."
+        ],
+        "shard": [
+          "The Bloodstone is a hungry thing. I have read enough old herb-lore to fear it, and not enough to explain it.",
+          "Whatever sleeps in that red stone, it does not belong to this world's gardens."
+        ],
+        "family": [
+          "My mother taught me these herbs and her mother taught her. I never married. The garden was jealous."
+        ]
+      },
+      "stories": [
+        "My grandmother told of the first Glenbrook, when the barrow was a hill and the hill was a king. They say he asked to be buried with his hounds. They say the hounds still keep watch."
+      ],
+      "advice": [
+        "Pick herbs in the morning, when the dew is still on them. They heal better. I do not know why. Ask the herbs.",
+        "Do not fight on an empty stomach and do not fight at the very edge of exhaustion. Retreat, bandage, return."
+      ],
+      "quest_lines": {
+        "songs_of_the_shard": {
+          "remind": [
+            "Lark sent you? That bard has a way of stirring up what is better left to settle. Ask me anything, and I will tell it straight."
+          ]
+        }
+      },
+      "reveal_marks": [
+        "old_barrow"
+      ],
+      "reveal_exp": 30,
+      "requires_hint": "There is more to that, dear, but not yet. Ask Garrick Hale about the wolves first, and then come back to me."
     },
     {
       "npc_id": "garrick_hale",
       "name": "Garrick Hale",
       "role": "Retired Glenbrook Militia Woodsman",
       "region": "Glenbrook Hollow",
-      "personality": ["gruff", "grieving", "protective", "no patience for nonsense"],
+      "personality": [
+        "gruff",
+        "grieving",
+        "protective",
+        "no patience for nonsense"
+      ],
       "hidden_knowledge": "The Red Fang Clan's camp sits past the Old Barrow ridge, hidden behind a deadfall you'd walk right past. Garrick lost half his old patrol to a Red Fang raid there and has marked the entrance in his head ever since, but he's never had the nerve -- or the numbers -- to go back.",
       "trigger_topic": "red fang camp",
-      "trigger_keywords": ["red fang", "camp location", "where is the camp", "old barrow", "raiders"],
+      "trigger_keywords": [
+        "red fang",
+        "camp location",
+        "where is the camp",
+        "old barrow",
+        "raiders"
+      ],
       "reveal_story_flag": "learned_camp_location",
       "reveal_spawns_camp": "red_fang_camp",
       "rapport_threshold_for_secret": 2,
@@ -88,7 +193,9 @@
       ],
       "epilogue_greeting": "Garrick actually looks up when you approach, something almost like relief on his face. \"Still in one piece, I see. Good.\"",
       "casual_keywords": {
-        "greeting": ["Hmph. What do you want?"],
+        "greeting": [
+          "Hmph. What do you want?"
+        ],
         "weather": [
           "Storm's coming. Wolves always get bold before a storm.",
           "Cold snap tonight. Keep a fire going if you're sleeping outside the walls."
@@ -126,16 +233,92 @@
           "Camp's cleared, Skar's dead, and the Glades are quiet. Didn't think I'd live to say that.",
           "Half my old patrol didn't get to see this. I'll carry that. But it's done, and that matters."
         ]
-      }
+      },
+      "aliases": [
+        "garrick",
+        "hale",
+        "the woodsman",
+        "the gate guard"
+      ],
+      "speech_style": "gruff",
+      "home": {
+        "region": "whispering_glades",
+        "landmark": "glenbrook"
+      },
+      "knows": {
+        "regions": [
+          "whispering_glades",
+          "thornwood",
+          "highmeadow"
+        ],
+        "npcs": [
+          "mira_thistlewood",
+          "old_ferris",
+          "reeve_corwin_ashby",
+          "sylas_underbough"
+        ]
+      },
+      "blurb": "Garrick walks the gate and the tree line, a retired militia woodsman who does not talk about the old patrol.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "Hmph. What do you want?",
+        "State your business, stranger. Make it short."
+      ],
+      "opinions": {
+        "mira_thistlewood": "Mira knows more than she says, and says more than is good for her. But she is honest, and that is rare.",
+        "old_ferris": "Ferris. Best smith in a hundred miles and the worst conversationalist. We get on fine.",
+        "reeve_corwin_ashby": "Corwin at Kingsford keeps the king's road. Good man. Over-fond of paperwork.",
+        "sylas_underbough": "Sylas the ranger? We walked patrols together once. Quiet one. He sees more in a shadow than most see in a candle."
+      },
+      "topic_lines": {
+        "danger": [
+          "Wolves, boars, and things that should not be wolves. Keep your back to a wall and your blade within reach.",
+          "Out past the tree line, everything is hungry. Most things are also stupid. That is your edge."
+        ],
+        "war": [
+          "There was a militia once. Forty good people. Do not ask me about it twice.",
+          "Wars are loud. The ones that kill you are quiet, and happen in forests."
+        ],
+        "history": [
+          "Glenbrook is older than the king's road. Some say older than the king. The barrow predates us all."
+        ],
+        "classes": [
+          "Swordsmen hold the line, bowmen thin the pack, rogues cut the throat, mages and alchemists do the strange work. All of them bleed the same."
+        ],
+        "night": [
+          "Never be caught beyond the gate after dark if you can help it. Wolves hunt in the dark and they do it well."
+        ]
+      },
+      "about_self": [
+        "Twenty winters on the militia roster, six on the road before that. I know every tree between here and the Barrow."
+      ],
+      "stories": [
+        "The old patrol used to tell a tale of a hound that guarded the Barrow. Big as a calf, eyes like coals. I never saw it. I never went looking either."
+      ],
+      "advice": [
+        "Bring more arrows than you think you need. Bring less pride than you think you have."
+      ],
+      "quest_lines": {},
+      "reveal_marks": [
+        "red_fang_camp"
+      ],
+      "reveal_exp": 40
     },
     {
       "npc_id": "old_ferris",
       "name": "Old Ferris",
       "role": "Glenbrook Blacksmith",
       "region": "Glenbrook Hollow",
-      "personality": ["gruff but kind", "proud craftsman", "practical", "terrible at small talk"],
+      "personality": [
+        "gruff but kind",
+        "proud craftsman",
+        "practical",
+        "terrible at small talk"
+      ],
       "casual_keywords": {
-        "greeting": ["Ferris grunts without looking up from the anvil. \"Something broken, or are you just here to talk?\""],
+        "greeting": [
+          "Ferris grunts without looking up from the anvil. \"Something broken, or are you just here to talk?\""
+        ],
         "weather": [
           "Rain plays hell with my bellows. Good day to stay in the forge and work.",
           "Cold's good for tempering steel, if nothing else."
@@ -166,7 +349,1900 @@
         "crafting": [
           "Whatever's in that shard fragment you're carrying runs hot in a way I've never felt from copper or iron. Bring it here and let me study it properly."
         ]
+      },
+      "aliases": [
+        "ferris",
+        "the smith",
+        "blacksmith",
+        "the blacksmith"
+      ],
+      "speech_style": "terse",
+      "home": {
+        "region": "whispering_glades",
+        "landmark": "glenbrook"
+      },
+      "knows": {
+        "regions": [
+          "whispering_glades",
+          "ironhold_hills",
+          "highmeadow"
+        ],
+        "npcs": [
+          "garrick_hale",
+          "mira_thistlewood",
+          "dorn_ashvale",
+          "lark_the_bard"
+        ]
+      },
+      "blurb": "Ferris is Glenbrook's blacksmith and has been hammering since before the village got its gate.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "Something broken, or just here to talk?",
+        "Mind the sparks. What do you need?"
+      ],
+      "opinions": {
+        "garrick_hale": "Garrick has his ghosts. I have my anvil. We keep each other company by saying nothing.",
+        "mira_thistlewood": "Mira patches what I break. Only fair I mend her pots in return.",
+        "dorn_ashvale": "Dorn runs the quarry forge in Ironhold. Better ore than mine. Worse manners than mine, if you can believe it.",
+        "lark_the_bard": "That songbird writes ballads about my forge. Gets the hammer wrong every time."
+      },
+      "topic_lines": {
+        "crafting": [
+          "Iron wants heat, patience, and the right amount of hate. Copper forgives mistakes. Steel remembers them.",
+          "A good edge is not sharp. It is true. Sharp is easy. True takes a lifetime."
+        ],
+        "money": [
+          "I charge fair. If a thing is worth fixing, I fix it. If not, I tell you to buy new.",
+          "Coin is just metal that other people agreed to believe in. I prefer metal that does something."
+        ],
+        "history": [
+          "The forge was here before the gate. I think it was here before the village, to be honest. Funny thing, that."
+        ],
+        "shard": [
+          "The shard fragment ran warm in my hand. Warm like blood, not like fire. I put it down more carefully than I would have liked to admit."
+        ],
+        "war": [
+          "Soldiers came through, years back. They broke everything. I mended everything. I never did get paid properly."
+        ]
+      },
+      "about_self": [
+        "Anvil since I was twelve. My father taught me and his father taught him. We have never been rich. We have never been idle either."
+      ],
+      "stories": [
+        "I once forged a blade for a captain who said he would pay in gold. He paid in stories. Good ones. I kept the blade-maker's mark on the tang and I think of him whenever I strike."
+      ],
+      "advice": [
+        "Keep your gear mended. A cracked buckle kills as dead as a dagger."
+      ],
+      "hidden_knowledge": "The dwarves who raised the Ironhold forges left a great vault beneath the Dwarven Ruin. Their old runes warm to a blacksmith's touch. I have been meaning to go for thirty years. I am too old now. You are not.",
+      "trigger_keywords": [
+        "dwarves",
+        "dwarven",
+        "old forge",
+        "runes",
+        "vault"
+      ],
+      "reveal_story_flag": "learned_dwarven_forge",
+      "rapport_threshold_for_secret": 2,
+      "requires_quest_flag": null,
+      "reveal_marks": [
+        "dwarven_ruin",
+        "ironhold_quarry"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The Dwarven Ruin lies south of the quarry. I told you what I know. Take a hammer, not a sword.",
+        "Dwarven runes warm to a smith. If it hums, do not be alarmed. It is happy to see you."
+      ],
+      "quest_lines": {
+        "songs_of_the_shard": {
+          "remind": [
+            "Lark sent you? Fine. The shard fragment ran warm in my hands. Tell the bard I said it was a plain stone to start with, and an ill one now."
+          ]
+        }
       }
+    },
+    {
+      "npc_id": "pip_wren",
+      "name": "Pip Wren",
+      "role": "Berry-Picker's Apprentice",
+      "region": "Glenbrook",
+      "personality": [
+        "cheerful",
+        "chatty",
+        "easily distracted"
+      ],
+      "aliases": [
+        "pip",
+        "the child",
+        "the kid"
+      ],
+      "speech_style": "brisk",
+      "home": {
+        "region": "whispering_glades",
+        "landmark": "glenbrook"
+      },
+      "knows": {
+        "regions": [
+          "whispering_glades"
+        ],
+        "npcs": [
+          "mira_thistlewood",
+          "garrick_hale",
+          "old_ferris"
+        ]
+      },
+      "blurb": "Pip is Glenbrook's youngest berry-picker and loudest promise-maker.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Hello! Hello! Are you a hero? You look like a hero. Do you like pie?"
+      ],
+      "opinions": {
+        "mira_thistlewood": "Mira is the best. She gave me a whole honey cake once. Also she promised me a pie. Do you know where it is?",
+        "garrick_hale": "Garrick is scary but he let me hold his axe once. Do not tell anyone.",
+        "old_ferris": "Ferris lets me work the bellows! It is so hot!"
+      },
+      "topic_lines": {
+        "food": [
+          "Berries are the best. Purple ones for pie, red ones for jam, and green ones are for bad ideas.",
+          "I ate nine berries once and my tongue turned purple for a week. Worth it."
+        ],
+        "animals": [
+          "Rabbits! Have you seen the red ones? They look at you funny. Garrick says do not touch.",
+          "I want a pet boar. Mira says no. Garrick says definitely no."
+        ],
+        "family": [
+          "I live with Aunt Wren by the well. She says I talk too much. I do not think that is possible."
+        ],
+        "danger": [
+          "Wolves are scary but boars are scarier because they are grumpy. Stay away from grumpy things!"
+        ],
+        "night": [
+          "I am not allowed outside after dark. Something makes noises in the Glades. Aunt Wren says it is owls. I say it is bigger than owls."
+        ]
+      },
+      "about_self": [
+        "I am Pip! I pick berries, I carry baskets, and I am going to be a famous baker. Soon. Right after the berries."
+      ],
+      "home_lines": [
+        "Glenbrook is the best village ever. We have a well, a smithy, a herbalist, and me!"
+      ],
+      "rumors": [
+        "I heard there is a haunted hill with a hound that never sleeps. I did not hear it from anyone important though.",
+        "Somebody said the red wolves are getting braver. I just stay out of the tall grass."
+      ],
+      "stories": [
+        "Once upon a time a berry was so sweet that every wolf in the Glades came to ask for one. The berry said no, and the wolves went home sad. The end. I made that up."
+      ],
+      "opinion_player": [
+        "You are my favourite hero so far! You are the only hero so far, but still!"
+      ],
+      "quest_lines": {
+        "pips_berry_promise": {
+          "give": [
+            "Mira promised me a pie if I bring her five Glade Berries, but I keep eating them on the way. Could you pick five for me? The bushes around the village are full of them!"
+          ],
+          "remind": [
+            "Five Glade Berries! Mira is going to make a pie and I will give you the first slice. Probably."
+          ],
+          "done": [
+            "Oh! They are perfect! Purple and everything! Here, take this. I got it from Mira, but it is yours now."
+          ]
+        }
+      },
+      "hidden_knowledge": "Do not tell anyone, but I found a tiny cave behind the waterfall at Glade Pond. There is a glowing stone in it. I did not touch it. It looked grumpy.",
+      "trigger_keywords": [
+        "secret place",
+        "hidden cave",
+        "glowing stone"
+      ],
+      "reveal_story_flag": "learned_pip_cave",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "glade_pond"
+      ],
+      "reveal_exp": 15,
+      "follow_up_lines": [
+        "I showed you the cave. Do not tell Garrick, okay? He will say it is dangerous."
+      ]
+    },
+    {
+      "npc_id": "reeve_corwin_ashby",
+      "name": "Reeve Corwin Ashby",
+      "role": "Reeve of Kingsford",
+      "region": "Kingsford",
+      "personality": [
+        "dutiful",
+        "weary",
+        "fair"
+      ],
+      "aliases": [
+        "corwin",
+        "ashby",
+        "the reeve",
+        "reeve"
+      ],
+      "speech_style": "brisk",
+      "home": {
+        "region": "highmeadow",
+        "landmark": "kingsford"
+      },
+      "knows": {
+        "regions": [
+          "highmeadow",
+          "whispering_glades",
+          "ironhold_hills",
+          "stormcoast"
+        ],
+        "npcs": [
+          "bess_hartwell",
+          "lark_the_bard",
+          "old_maud_fennick",
+          "garrick_hale"
+        ]
+      },
+      "blurb": "Corwin keeps the king's road and Kingsford's ledgers, in that order.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "Welcome to Kingsford. I am Reeve Ashby. Mind the road, mind the law, and do not feed the geese."
+      ],
+      "opinions": {
+        "bess_hartwell": "Bess Hartwell runs the best inn on the road and the worst tab policy in the county.",
+        "lark_the_bard": "Lark? Charming. Brings in half the trade. Owes me for a lute I never saw.",
+        "old_maud_fennick": "Old Maud's farm feeds half Kingsford. She is rude to me, which I take as respect.",
+        "garrick_hale": "Garrick Hale of Glenbrook. We served together. He does not write, but he is the best tracker I know."
+      },
+      "topic_lines": {
+        "money": [
+          "Tolls fund the road, the road feeds the town, the town pays the tolls. It is a circle, and I am in the middle of it.",
+          "I keep careful ledgers. When the coin runs short, I know exactly who to ask."
+        ],
+        "war": [
+          "The king's patrols are thin out here. I make do with farmers, bows, and prayers.",
+          "Bandits grow bold when the garrison is far. We do what we can."
+        ],
+        "danger": [
+          "Wolves on the road, boars in the barley, and bandits in the bluff at Bandit Lookout. Travel in the morning, camp in a village."
+        ],
+        "travel": [
+          "The king's road runs east to the hills and west to the Glades. Stay on it and you will rarely meet a bear. Leave it and you will meet everything else."
+        ],
+        "history": [
+          "Kingsford is named for the ford, not the king. The king came later and took the credit."
+        ]
+      },
+      "about_self": [
+        "I have kept this ford for twelve years. The ledgers are tidy, the gate is oiled, and the road is mostly safe. That last part is why I need your help."
+      ],
+      "home_lines": [
+        "Kingsford sits where the king's road crosses the river. Everyone passes through. Few stay. I try to make it worth staying."
+      ],
+      "rumors": [
+        "Highwaymen have been spotted near Bandit Lookout. The patrols cannot spare the men.",
+        "A caravan from the dunes arrives next week. It will bring spice, silks, and trouble."
+      ],
+      "stories": [
+        "The ford was a battleground once. They say the river still runs red every anniversary. I have checked. It does not. Mostly."
+      ],
+      "quest_lines": {
+        "kings_road": {
+          "give": [
+            "Wolves and boars have been harrying travellers on the Highmeadow roads. I need five of them dealt with. Do that and the road will be safe enough for the next caravan."
+          ],
+          "remind": [
+            "Five beasts on the roads around Kingsford, if you please. Fewer wolves means fewer funerals."
+          ],
+          "done": [
+            "The road is quieter. The merchants will notice, and so will I. The ledgers will say you earned this."
+          ]
+        }
+      },
+      "hidden_knowledge": "Bandit Lookout, south-east of town, is where the highwaymen gather. They have a captain, hired by someone who is not a bandit. I do not know who. If you go, go carefully, and tell no one at the inn.",
+      "trigger_keywords": [
+        "bandit lookout",
+        "highwaymen",
+        "who pays",
+        "captain of the bandits"
+      ],
+      "reveal_story_flag": "learned_bandit_patron",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "bandit_lookout"
+      ],
+      "reveal_exp": 35,
+      "follow_up_lines": [
+        "I told you what I know of the bandits. It is not much, but it is more than the town knows."
+      ]
+    },
+    {
+      "npc_id": "bess_hartwell",
+      "name": "Bess Hartwell",
+      "role": "Innkeeper of the Hartwell Inn",
+      "region": "Kingsford",
+      "personality": [
+        "motherly",
+        "shrewd",
+        "overworked"
+      ],
+      "aliases": [
+        "bess",
+        "hartwell",
+        "the innkeeper",
+        "innkeeper"
+      ],
+      "speech_style": "warm",
+      "home": {
+        "region": "highmeadow",
+        "landmark": "kingsford"
+      },
+      "knows": {
+        "regions": [
+          "highmeadow",
+          "stormcoast",
+          "sunscorch_dunes"
+        ],
+        "npcs": [
+          "reeve_corwin_ashby",
+          "lark_the_bard",
+          "zahra_qasim"
+        ]
+      },
+      "blurb": "Bess runs the Hartwell Inn, where every traveller on the king's road eventually sits down.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Sit, sit! Mind the floor, I just scrubbed it. What can I get you, love?"
+      ],
+      "opinions": {
+        "reeve_corwin_ashby": "Corwin pays his tab on time and tips in advice. Good man, bad tipper.",
+        "lark_the_bard": "Lark sings for his supper and sometimes for mine. I let him, because the customers like it.",
+        "zahra_qasim": "Zahra from the Dust Bazaar? Sharpest trader on the road. Sells me spice at a price that hurts and a flavour that heals."
+      },
+      "topic_lines": {
+        "food": [
+          "Stew, bread, and a pint. That is the whole menu, and it is enough. When we have meat, it is a feast.",
+          "Cooked meat is worth its weight in silver out here. Raw is worth a bad stomach."
+        ],
+        "money": [
+          "I charge fair. Not cheap, fair. Cheap is how you end up with bad meat and good lawyers."
+        ],
+        "music": [
+          "Lark plays on Fridays. If you are here on a Friday, bring ear-plugs or a very forgiving heart."
+        ],
+        "travel": [
+          "I hear everything travellers say. The south road is quiet, the east road is bandits, and the west road smells of wet dog."
+        ],
+        "family": [
+          "My husband passed three winters back. The inn keeps me busy and the busy keeps me sane."
+        ]
+      },
+      "about_self": [
+        "I was born at the inn. My mother kept it, her mother before her. I plan to die at the inn. Not soon, mind."
+      ],
+      "home_lines": [
+        "Kingsford is where the road gets its supper. Everyone stops here. It is a good place to be if you like hearing gossip."
+      ],
+      "rumors": [
+        "I heard from a caravan driver that the dunes are full of scorpions the size of dogs. I hope he was joking.",
+        "A traveller said there is an oasis in the desert with a keeper who never sleeps."
+      ],
+      "stories": [
+        "A traveller once left a pearl in payment. It was worth more than the inn. I returned it. He never came back. I still keep the room warm."
+      ],
+      "quest_lines": {
+        "larders_empty": {
+          "give": [
+            "The larder is bare and the stew pot nearly dry. Four portions of cooked meat is all I need. Hunt something, cook it at a campfire, and bring it here, love."
+          ],
+          "remind": [
+            "Four portions of cooked meat, love. Hunt, cook, bring. The inn is counting on you."
+          ],
+          "done": [
+            "You are a lifesaver! The guests will eat tonight, and so will you. Sit, sit, a free supper for you."
+          ]
+        }
+      },
+      "hidden_knowledge": "There is a hidden room under the inn, my husband's wine cellar. I still do not go down. If you want to look, the key is above the lintel. Mind the spiders.",
+      "trigger_keywords": [
+        "cellar",
+        "wine cellar",
+        "hidden room",
+        "husband's cellar"
+      ],
+      "reveal_story_flag": "learned_inn_cellar",
+      "rapport_threshold_for_secret": 3,
+      "reveal_exp": 20,
+      "follow_up_lines": [
+        "The cellar is yours to look at. Take what you like, but leave the portrait on the wall."
+      ]
+    },
+    {
+      "npc_id": "lark_the_bard",
+      "name": "Lark",
+      "role": "Wandering Bard",
+      "region": "Kingsford",
+      "personality": [
+        "charming",
+        "dramatic",
+        "curious"
+      ],
+      "aliases": [
+        "lark",
+        "the bard",
+        "bard",
+        "songbird"
+      ],
+      "speech_style": "lyrical",
+      "home": {
+        "region": "highmeadow",
+        "landmark": "kingsford"
+      },
+      "knows": {
+        "regions": [
+          "highmeadow",
+          "whispering_glades",
+          "thornwood",
+          "stormcoast",
+          "sunscorch_dunes"
+        ],
+        "npcs": [
+          "bess_hartwell",
+          "old_ferris",
+          "mira_thistlewood",
+          "reeve_corwin_ashby"
+        ]
+      },
+      "blurb": "Lark sings for coin, supper, and the next good story, and has walked every road worth walking.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Ah, a new face for the chorus! I am Lark, and if you have a story, I will trade a verse for it."
+      ],
+      "opinions": {
+        "bess_hartwell": "Bess! The heart of the Hartwell and the lungs of Kingsford. She feeds a bard, and a bard is grateful.",
+        "old_ferris": "Ferris is a hammer in the shape of a man. His forge is a song of its own, if one listens.",
+        "mira_thistlewood": "Mira is all green things and gentle warnings. A fine verse waiting for a fine rhyme.",
+        "reeve_corwin_ashby": "Corwin has a heart under all those ledgers. I put it in a verse once. He asked me to remove it."
+      },
+      "topic_lines": {
+        "music": [
+          "A lute in the right hands is worth ten swords. Songs outlast kings. Remember that when you choose your battles.",
+          "Every village has a song. If you listen, they tell you where the ghosts are."
+        ],
+        "history": [
+          "The old kings left no bones, only ballads. Every ballad is half a lie and half a prayer.",
+          "I collect stories the way Ferris collects ore. Slowly, and with an eye for the good bits."
+        ],
+        "travel": [
+          "I walk the roads because the roads walk me. Highmeadow, Thornwood, the dunes, the coast. Each one a different key."
+        ],
+        "shard": [
+          "The Bloodstone Shard! A tale of red fire and whispering beasts. Ferris and Mira each know a verse. I am gathering them for a ballad."
+        ],
+        "gods": [
+          "The old gods are in the stones, the moon, and the sea. I sing to all of them. One of them is bound to listen."
+        ]
+      },
+      "about_self": [
+        "I was born in a cart on the road to Kingsford. I have been singing since before I could speak. People say that explains a lot."
+      ],
+      "home_lines": [
+        "Kingsford is where the roads meet and where the audiences are. The Hartwell Inn is my stage, my bed, and my creditor."
+      ],
+      "rumors": [
+        "They say the Hollow Peaks have a hermit who talks to the snow. I want to hear what it says.",
+        "There is a lighthouse on the coast whose keeper sings to the waves. I would give a year of coin for that song."
+      ],
+      "stories": [
+        "There was a king who could not sleep because the moon laughed at him. He climbed the highest peak to scold it. The moon dropped a snowflake on his nose. He has slept ever since."
+      ],
+      "jokes": [
+        "Why did the bard cross the road? To get to the other verse."
+      ],
+      "quest_lines": {
+        "songs_of_the_shard": {
+          "give": [
+            "I am writing a ballad of the Bloodstone and want the real tale from people who live it. Old Ferris in Glenbrook and Mira Thistlewood each know a verse. Ask them, then sing the answer back to me."
+          ],
+          "remind": [
+            "Ferris and Mira, my friend. Their stories are the heart of my ballad. Bring them back when you have them."
+          ],
+          "done": [
+            "Magnificent! Ferris and Mira both gave you gold, and now I shall spin it into silver. The ballad is nearly finished. Here, take a verse of thanks and a few coins besides."
+          ]
+        }
+      },
+      "hidden_knowledge": "Between songs I have learned that the highwaymen at Bandit Lookout are paid by someone in Kingsford. A tune I overheard. I do not know who. The Reeve would want to know, but trust no one with the name yet.",
+      "trigger_keywords": [
+        "bandit patron",
+        "who pays the bandits",
+        "traitor in kingsford"
+      ],
+      "reveal_story_flag": "learned_bandit_whisper",
+      "rapport_threshold_for_secret": 3,
+      "reveal_marks": [
+        "bandit_lookout"
+      ],
+      "reveal_exp": 35,
+      "follow_up_lines": [
+        "I sang you my secret and it is out in the world now. Do be careful with it."
+      ]
+    },
+    {
+      "npc_id": "old_maud_fennick",
+      "name": "Old Maud Fennick",
+      "role": "Barley Farmer",
+      "region": "Harvest Farm",
+      "personality": [
+        "blunt",
+        "tough",
+        "secretly kind"
+      ],
+      "aliases": [
+        "maud",
+        "fennick",
+        "old maud",
+        "the farmer"
+      ],
+      "speech_style": "earthy",
+      "home": {
+        "region": "highmeadow",
+        "landmark": "harvest_farm"
+      },
+      "knows": {
+        "regions": [
+          "highmeadow",
+          "whispering_glades"
+        ],
+        "npcs": [
+          "reeve_corwin_ashby",
+          "bess_hartwell"
+        ]
+      },
+      "blurb": "Maud works the barley fields at Harvest Farm and feeds half of Kingsford.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "You are standing in my barley. Step out of it. Now, what do you want?"
+      ],
+      "opinions": {
+        "reeve_corwin_ashby": "Corwin the reeve counts my barley sacks and charges me the toll. He is a good boy, but he fusses.",
+        "bess_hartwell": "Bess buys my barley. She pays on time and pours generous. I like her."
+      },
+      "topic_lines": {
+        "weather": [
+          "Rain in the barley is worth gold. Rain in the hay is worth grief. I read the sky every morning.",
+          "The wind tells me when the harvest is coming. It is coming now."
+        ],
+        "food": [
+          "Barley bread, barley stew, barley beer. If you do not like barley, you will go hungry in Highmeadow.",
+          "Fresh bread is the one luxury I allow myself. Do not ask for butter."
+        ],
+        "animals": [
+          "Boars rooting up the rows, deer nibbling the sprouts, crows eating the rest. I fight them all and win about half."
+        ],
+        "family": [
+          "My boys left for the coast and never wrote. The fields write to me every morning. I answer with a hoe."
+        ],
+        "danger": [
+          "The road is safe in the day. At night the boars come out. Do not walk the rows after dark."
+        ]
+      },
+      "about_self": [
+        "Fifty harvests on this land. My husband went in the sixth. I plan to follow him in the sixtieth."
+      ],
+      "home_lines": [
+        "Harvest Farm has fed Kingsford since before the road was paved. The soil is good, the neighbours are bad, and the barley is perfect."
+      ],
+      "rumors": [
+        "Something large has been leaving tracks in the north field. Not a boar. Bigger.",
+        "The windmill to the east has not turned in a year. Somebody has been sleeping in it."
+      ],
+      "stories": [
+        "My grandmother swore the old windmill grinds flour on nights with no wind. I have never seen it. I have never gone to look either."
+      ],
+      "quest_lines": {
+        "harvest_pests": {
+          "give": [
+            "Something is rooting up my barley at night. Boars, I suspect. Drive off four of them and I will be in your debt, and I do not like being in debt."
+          ],
+          "remind": [
+            "Four boars, near the farm. Do not argue with them. Just kill them."
+          ],
+          "done": [
+            "Good riddance. The barley will live another season. Here, take a loaf. Do not tell anyone I was nice."
+          ]
+        }
+      },
+      "hidden_knowledge": "The old windmill to the east has a cellar. Last winter I found a bag of coin in it, left by someone in a hurry. I took only enough to replace my plough. The rest is still there, if you are fond of risk.",
+      "trigger_keywords": [
+        "windmill",
+        "old windmill",
+        "coin in the cellar"
+      ],
+      "reveal_story_flag": "learned_windmill_coin",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "old_windmill"
+      ],
+      "reveal_exp": 20,
+      "follow_up_lines": [
+        "The windmill is east. Do not bring me any trouble. I have enough of my own."
+      ]
+    },
+    {
+      "npc_id": "sylas_underbough",
+      "name": "Sylas Underbough",
+      "role": "Thornwood Ranger",
+      "region": "Thornwood Lodge",
+      "personality": [
+        "quiet",
+        "watchful",
+        "dry-humoured"
+      ],
+      "aliases": [
+        "sylas",
+        "underbough",
+        "the ranger",
+        "ranger"
+      ],
+      "speech_style": "terse",
+      "home": {
+        "region": "thornwood",
+        "landmark": "thornwood_lodge"
+      },
+      "knows": {
+        "regions": [
+          "thornwood",
+          "whispering_glades",
+          "hollow_peaks"
+        ],
+        "npcs": [
+          "elowen_moonsong",
+          "garrick_hale",
+          "captain_ysolde_varn"
+        ]
+      },
+      "blurb": "Sylas watches the Thornwood trails and says little about what he sees.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "You walk loud. Sit by the fire; the trees are listening enough as it is."
+      ],
+      "opinions": {
+        "elowen_moonsong": "Elowen tends the Moonwell. I guard the path to it. We rarely speak, which is how we like it.",
+        "garrick_hale": "Garrick and I walked patrols together. He talks less than I do. That takes skill.",
+        "captain_ysolde_varn": "Ysolde holds the pass above us. If she calls for aid, I go. That is all that needs saying."
+      },
+      "topic_lines": {
+        "danger": [
+          "Shadow wolves hunt at dusk. Bone soldiers walk the old road at night. Neither one tires.",
+          "The Thornwood bites back. Keep to the trails and out of the briars."
+        ],
+        "animals": [
+          "The wolves here are bigger than in the Glades, and darker. Something about the shade, I think."
+        ],
+        "night": [
+          "Never camp under a thorn tree. They lean in toward the warmth."
+        ],
+        "history": [
+          "Old soldiers fell here. Some still walk. I do not disturb them and they do not disturb me, mostly."
+        ]
+      },
+      "about_self": [
+        "Ranger for nineteen years. I know every path, every bog, and every bad idea in Thornwood."
+      ],
+      "home_lines": [
+        "The Lodge is the last safe fire before the deep wood. Stay warm, then go carefully."
+      ],
+      "rumors": [
+        "Spiders have taken the old den to the north. I do not go there anymore.",
+        "The Moonwell water has been glowing brighter these past nights. Elowen will not say why."
+      ],
+      "stories": [
+        "A ranger once followed a white stag into the thorns and never came out. They say the stag still waits for a second follower."
+      ],
+      "quest_lines": {
+        "thorn_patrol": {
+          "give": [
+            "Patrol with me, in spirit anyway. Check the Moonwell, thin the shadow wolves along the trail, and report back. Five should do."
+          ],
+          "remind": [
+            "Moonwell, then five wolves of the shadow kind, then me. In that order if you like."
+          ],
+          "done": [
+            "The trail is quieter. Good work. Take this, and keep your eyes up."
+          ]
+        }
+      },
+      "hidden_knowledge": "There is a hollow in the old ruins where the bone soldiers rise. Something calls them there. Bring a torch, and do not go alone.",
+      "trigger_keywords": [
+        "bone soldiers",
+        "hollow ruins",
+        "ruins",
+        "who calls them"
+      ],
+      "reveal_story_flag": "learned_hollow_ruins",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "hollow_ruins"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The ruins are where I said. Do not wake what you cannot put back down."
+      ]
+    },
+    {
+      "npc_id": "elowen_moonsong",
+      "name": "Elowen Moonsong",
+      "role": "Keeper of the Moonwell",
+      "region": "The Moonwell",
+      "personality": [
+        "serene",
+        "cryptic",
+        "ancient-feeling"
+      ],
+      "aliases": [
+        "elowen",
+        "moonsong",
+        "the keeper",
+        "well keeper"
+      ],
+      "speech_style": "mystic",
+      "home": {
+        "region": "thornwood",
+        "landmark": "moonwell"
+      },
+      "knows": {
+        "regions": [
+          "thornwood",
+          "whispering_glades",
+          "hollow_peaks"
+        ],
+        "npcs": [
+          "sylas_underbough",
+          "mira_thistlewood",
+          "brannoch_the_hermit"
+        ]
+      },
+      "blurb": "Elowen keeps the Moonwell and listens to what the water remembers.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "The water told me you were coming. It was less specific about why."
+      ],
+      "opinions": {
+        "sylas_underbough": "Sylas keeps the path clear. Humans call that duty. The wood calls it friendship.",
+        "mira_thistlewood": "Mira and I trade herbs and silence. Both are rare.",
+        "brannoch_the_hermit": "Brannoch speaks to snow. I speak to water. We understand each other better than we admit."
+      },
+      "topic_lines": {
+        "magic": [
+          "Magic is attention, nothing more. The well has been paid attention to for a thousand years. It remembers.",
+          "Moonlight, still water, and an open mind. That is most of the craft."
+        ],
+        "gods": [
+          "The old powers sleep in the wells and the stones. Do not wake them. Do not insult them either."
+        ],
+        "night": [
+          "Night is when the water is clearest. Come at midnight and you will see more than your own face."
+        ],
+        "shard": [
+          "The red stone cries to the water. The water does not answer. That silence troubles me."
+        ],
+        "healing": [
+          "Moonwell water heals what has been wounded by darkness. It does little for broken bones, sadly."
+        ]
+      },
+      "about_self": [
+        "I have kept this well since before your grandmother. I will keep it after you are gone. That is not a threat; it is a comfort."
+      ],
+      "home_lines": [
+        "The Moonwell glows when the night is thin. Tonight is thin. Sit if you wish."
+      ],
+      "rumors": [
+        "The wolves are crueler this year. The water says something has stirred them from below."
+      ],
+      "stories": [
+        "A traveller once asked the well for a wish. It gave him a reflection that looked back. He has not asked since."
+      ],
+      "quest_lines": {
+        "moonwell_rite": {
+          "give": [
+            "The rite needs pine resin, three lumps, taken from the old pines of the Thornwood. Bring them and I will light the water."
+          ],
+          "remind": [
+            "Three lumps of pine resin. The pines are patient. So must you be."
+          ],
+          "done": [
+            "The Moonwell shines. Take a measure of its light with you. It will not last, but neither will the dark."
+          ]
+        }
+      },
+      "hidden_knowledge": "Beneath the Hollow Peaks there is a cave where a hermit hears the snow speak. He once told me the mountains are older than the sky. Go to him, gently.",
+      "trigger_keywords": [
+        "hermit",
+        "snow speaks",
+        "mountains older"
+      ],
+      "reveal_story_flag": "learned_hermit_cave",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "hermit_cave"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The hermit will receive you if you are quiet. Bring him a bloom from the frost."
+      ]
+    },
+    {
+      "npc_id": "captain_ysolde_varn",
+      "name": "Captain Ysolde Varn",
+      "role": "Commander of Frostwatch Outpost",
+      "region": "Frostwatch Outpost",
+      "personality": [
+        "disciplined",
+        "stern",
+        "protective of her people"
+      ],
+      "aliases": [
+        "ysolde",
+        "varn",
+        "the captain",
+        "captain"
+      ],
+      "speech_style": "brisk",
+      "home": {
+        "region": "hollow_peaks",
+        "landmark": "frostwatch_outpost"
+      },
+      "knows": {
+        "regions": [
+          "hollow_peaks",
+          "thornwood"
+        ],
+        "npcs": [
+          "brannoch_the_hermit",
+          "sylas_underbough"
+        ]
+      },
+      "blurb": "Ysolde commands Frostwatch Outpost and holds the pass against whatever comes down the mountain.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "State your name and purpose. Quickly. The cold does not wait."
+      ],
+      "opinions": {
+        "brannoch_the_hermit": "The hermit is harmless and half-mad. He also predicted the last avalanche, so I do not laugh.",
+        "sylas_underbough": "Sylas sends word when the Thornwood stirs. I send him soup when it does not. Fair trade."
+      },
+      "topic_lines": {
+        "war": [
+          "We hold the pass. That is all. If it falls, the lowlands burn.",
+          "Seventeen soldiers, one wall, one pass. Not poor odds if you are stubborn enough."
+        ],
+        "danger": [
+          "Snow wolves in packs, frost bears at the ridge, ice wisps near the lake. Dress warm and move fast."
+        ],
+        "weather": [
+          "The wind here has teeth. If it tells you to turn back, listen."
+        ],
+        "history": [
+          "The outpost was built by a king who never saw it. We keep his orders anyway."
+        ]
+      },
+      "about_self": [
+        "Twenty-two years of service, eleven in the Peaks. I have lost a toe, two friends, and my patience for fools."
+      ],
+      "home_lines": [
+        "Frostwatch is cold, cramped, and ours. Warm yourself and move along."
+      ],
+      "rumors": [
+        "Wolves have been coming down the pass in larger numbers than usual. The snow is not feeding them well."
+      ],
+      "stories": [
+        "A sentry once saw a white bear stand on its hind legs and bow to the moon. He was relieved of duty. I believe him."
+      ],
+      "quest_lines": {
+        "watch_the_pass": {
+          "give": [
+            "Snow wolves are gathering on the pass. Kill six of them and report to me. We hold this line together."
+          ],
+          "remind": [
+            "Six snow wolves on the pass. The wall is counting on you."
+          ],
+          "done": [
+            "The pass is clearer. You have earned a place at our fire. And this."
+          ]
+        }
+      },
+      "hidden_knowledge": "There is a frozen lake east of the outpost. Beneath the ice, something pulses. The sentries say it is a trick of the light. I say we should not test that.",
+      "trigger_keywords": [
+        "frozen lake",
+        "the lake",
+        "under the ice",
+        "pulsing"
+      ],
+      "reveal_story_flag": "learned_frozen_lake",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "frozen_lake"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The lake is east. Do not walk on it. I will not explain twice."
+      ]
+    },
+    {
+      "npc_id": "brannoch_the_hermit",
+      "name": "Brannoch the Hermit",
+      "role": "Mountain Hermit",
+      "region": "Hermit's Cave",
+      "personality": [
+        "rambling",
+        "gentle",
+        "otherworldly"
+      ],
+      "aliases": [
+        "brannoch",
+        "the hermit",
+        "hermit"
+      ],
+      "speech_style": "mystic",
+      "home": {
+        "region": "hollow_peaks",
+        "landmark": "hermit_cave"
+      },
+      "knows": {
+        "regions": [
+          "hollow_peaks",
+          "thornwood"
+        ],
+        "npcs": [
+          "captain_ysolde_varn",
+          "elowen_moonsong"
+        ]
+      },
+      "blurb": "Brannoch lives alone in a cave on the mountainside and says the snow tells him things.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Hello, hello. The snow said you were coming. It did not say you were kind. Are you?"
+      ],
+      "opinions": {
+        "captain_ysolde_varn": "The Captain frowns at me, and then brings me firewood. A fair woman.",
+        "elowen_moonsong": "Elowen listens to water. I listen to snow. We should compare notes more."
+      },
+      "topic_lines": {
+        "weather": [
+          "The snow falls in a rhythm if you listen. Three soft, one hard. That means a storm.",
+          "The wind is a child that never grew up. Humour it."
+        ],
+        "magic": [
+          "Magic is just the mountain remembering itself. I only help it along."
+        ],
+        "gods": [
+          "There are gods in the high places. They are shy. Do not stare."
+        ],
+        "animals": [
+          "The frost bears are lonely. So are the wolves. Everyone up here is lonely."
+        ],
+        "history": [
+          "Before the kingdoms the mountains were already old. They will outlast the next kingdom too."
+        ]
+      },
+      "about_self": [
+        "I came up here to think for a week. That was forty years ago. The week is not quite done."
+      ],
+      "home_lines": [
+        "This cave is warm because I sing to it. The cave likes songs, mostly sad ones."
+      ],
+      "rumors": [
+        "The summit shrine hums at night. I have not climbed to see why. I am old, not foolish."
+      ],
+      "stories": [
+        "Once the moon fell asleep over the peaks and the snow tucked her in. In the morning there was a lake. That is the whole story."
+      ],
+      "quest_lines": {
+        "hermits_bloom": {
+          "give": [
+            "Frost blooms grow in the cold hollows. Two of them, please. They keep the snow from forgetting my name."
+          ],
+          "remind": [
+            "Two frost blooms. The hollows hide them well. Look where the snow is thinnest."
+          ],
+          "done": [
+            "Beautiful! The snow shall remember me another winter. Take this, and a blessing."
+          ]
+        }
+      },
+      "hidden_knowledge": "At the summit there is a shrine older than the mountains' names. The snow gathers there like a congregation. Bring respect, not a sword.",
+      "trigger_keywords": [
+        "summit",
+        "shrine",
+        "the top",
+        "highest peak"
+      ],
+      "reveal_story_flag": "learned_summit_shrine",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "summit_shrine"
+      ],
+      "reveal_exp": 35,
+      "follow_up_lines": [
+        "The shrine is waiting. Go gently, and say hello for me."
+      ]
+    },
+    {
+      "npc_id": "dorn_ashvale",
+      "name": "Dorn Ashvale",
+      "role": "Quarry Foreman and Smith",
+      "region": "Ironhold Quarry",
+      "personality": [
+        "blunt",
+        "tireless",
+        "proud"
+      ],
+      "aliases": [
+        "dorn",
+        "ashvale",
+        "the foreman",
+        "foreman"
+      ],
+      "speech_style": "gruff",
+      "home": {
+        "region": "ironhold_hills",
+        "landmark": "ironhold_quarry"
+      },
+      "knows": {
+        "regions": [
+          "ironhold_hills",
+          "whispering_glades"
+        ],
+        "npcs": [
+          "hilde_coppergate",
+          "old_ferris"
+        ]
+      },
+      "blurb": "Dorn runs the Ironhold quarry and its forge, and prides himself on never losing a worker.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "Mind the loose rock. Mind your feet. Mind your tongue. In that order."
+      ],
+      "opinions": {
+        "hilde_coppergate": "Hilde runs the Deepvein mine. Tough as flint. We argue about prices and respect each other for it.",
+        "old_ferris": "Ferris from Glenbrook? Good hands, small forge. I send him my seconds and he makes them sing."
+      },
+      "topic_lines": {
+        "crafting": [
+          "Iron ore, coal, a hot forge, and patience. Everything else is decoration.",
+          "A good blade comes from good ore. I only mine good ore."
+        ],
+        "money": [
+          "I pay my men fair and on time. That is all the secret there is."
+        ],
+        "danger": [
+          "Hill brigands raid the carts. Rock golems wander in from the tarn. Take a friend or take a shield."
+        ],
+        "history": [
+          "Dwarves worked these hills before us. Their tunnels run deeper than the maps say."
+        ]
+      },
+      "about_self": [
+        "Thirty years at the quarry. I have broken eleven hammers and four bones, and I regret none of them."
+      ],
+      "home_lines": [
+        "The quarry feeds a dozen forges. Everything strong in the east began as this rock."
+      ],
+      "rumors": [
+        "Golems have been waking near the tarn. They never did that before.",
+        "The brigands at the slag camp are well-armed. Someone is feeding them steel."
+      ],
+      "stories": [
+        "My grandfather swore he heard the mountain breathe one night. We put new beams in the next day. The old ones cracked."
+      ],
+      "quest_lines": {
+        "ore_for_the_forge": {
+          "give": [
+            "The forge is hungry. Bring me five iron ore from the veins around the quarry. I will pay you in coin and in steel."
+          ],
+          "remind": [
+            "Five iron ore. Swing a pick, or take it off a golem. I am not choosy."
+          ],
+          "done": [
+            "Good ore. Good work. Here is your pay, and a bit extra for not complaining."
+          ]
+        }
+      },
+      "hidden_knowledge": "There is a slag camp south of the quarry where the brigands smelt stolen steel. Their leader is not a fool. If you go, strike fast and leave no one to warn the rest.",
+      "trigger_keywords": [
+        "slag camp",
+        "brigands",
+        "stolen steel"
+      ],
+      "reveal_story_flag": "learned_slag_camp",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "slag_camp"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "You know where the slag camp is. Do not make me regret telling you."
+      ]
+    },
+    {
+      "npc_id": "hilde_coppergate",
+      "name": "Hilde Coppergate",
+      "role": "Deepvein Mine Master",
+      "region": "Deepvein Mine",
+      "personality": [
+        "sharp",
+        "fearless",
+        "tired"
+      ],
+      "aliases": [
+        "hilde",
+        "coppergate",
+        "the mine master",
+        "mine master"
+      ],
+      "speech_style": "gruff",
+      "home": {
+        "region": "ironhold_hills",
+        "landmark": "deepvein_mine"
+      },
+      "knows": {
+        "regions": [
+          "ironhold_hills"
+        ],
+        "npcs": [
+          "dorn_ashvale"
+        ]
+      },
+      "blurb": "Hilde has run the Deepvein Mine for fifteen years and has not lost a miner to the dark yet.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "Hard hat or no hat, I do not care, but do not stand under the supports. What do you need?"
+      ],
+      "opinions": {
+        "dorn_ashvale": "Dorn Ashvale and his quarry. We swap ore and insults. I have yet to lose either contest."
+      },
+      "topic_lines": {
+        "danger": [
+          "The deep levels have things in them that do not like lamps. I lost a lantern last week. I do not know what took it.",
+          "Rock golems rise when the ground shakes. I have stopped counting."
+        ],
+        "money": [
+          "Copper and iron pay the bills. Silver pays the debts. Gold I have only heard of."
+        ],
+        "history": [
+          "The first shaft was dug by dwarves. We only widened it."
+        ],
+        "family": [
+          "My crew is my family. I have no other, and I would like to keep it that way."
+        ]
+      },
+      "about_self": [
+        "I have been underground for thirty years. I have never seen the sky look as good as when I leave."
+      ],
+      "home_lines": [
+        "Deepvein runs deep. Do not go below the third level without a rope and a friend."
+      ],
+      "rumors": [
+        "There are noises in the lower tunnels. My miners say it is the rock settling. I say rock does not whisper."
+      ],
+      "stories": [
+        "An old miner swore he saw a golem kneel and weep. He quit that week and became a baker."
+      ],
+      "quest_lines": {
+        "deepvein_trouble": {
+          "give": [
+            "Something is creeping through the upper tunnels. Five of them. Clear them out and report back."
+          ],
+          "remind": [
+            "Five creatures in the upper tunnels. My crew will not go back until they are gone."
+          ],
+          "done": [
+            "The tunnels are clear. My crew breathes again. You have earned a share of the vein."
+          ]
+        }
+      },
+      "hidden_knowledge": "The old dwarven ruin is connected to the lower mine. I sealed the passage years ago. If you want to open it, the key is a hammer-strike on the third beam, twice. Do not tell Dorn.",
+      "trigger_keywords": [
+        "dwarven ruin",
+        "sealed passage",
+        "lower mine",
+        "third beam"
+      ],
+      "reveal_story_flag": "learned_sealed_passage",
+      "rapport_threshold_for_secret": 3,
+      "reveal_marks": [
+        "dwarven_ruin"
+      ],
+      "reveal_exp": 35,
+      "follow_up_lines": [
+        "The passage is sealed for a reason. Open it only if you are sure."
+      ]
+    },
+    {
+      "npc_id": "zahra_qasim",
+      "name": "Zahra Qasim",
+      "role": "Bazaar Spice Merchant",
+      "region": "Dust Bazaar",
+      "personality": [
+        "shrewd",
+        "charming",
+        "always haggling"
+      ],
+      "aliases": [
+        "zahra",
+        "qasim",
+        "the merchant",
+        "merchant"
+      ],
+      "speech_style": "merchant",
+      "home": {
+        "region": "sunscorch_dunes",
+        "landmark": "dust_bazaar"
+      },
+      "knows": {
+        "regions": [
+          "sunscorch_dunes",
+          "highmeadow",
+          "stormcoast"
+        ],
+        "npcs": [
+          "bess_hartwell",
+          "tamsin_the_well_keeper"
+        ]
+      },
+      "blurb": "Zahra trades spices, silks, and rumours at the Dust Bazaar, and has never lost a bargain.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Welcome, welcome, friend! Spice for your stew, silk for your sweetheart, or news for a coin?"
+      ],
+      "opinions": {
+        "bess_hartwell": "Bess of Kingsford drives a hard bargain with a soft smile. I admire her enormously and avoid her at the market.",
+        "tamsin_the_well_keeper": "Tamsin keeps the oasis well. Without her, my caravans would die of thirst. I send her gifts and pretend they are for business."
+      },
+      "topic_lines": {
+        "money": [
+          "Everything has a price, my friend. Even this advice. First one is free, the second costs you a smile.",
+          "Gold is a language. Learn it and the whole world will speak to you."
+        ],
+        "food": [
+          "Saffron, cumin, dried peppers, and dates. Add to any stew and you will think you are rich."
+        ],
+        "travel": [
+          "The dunes shift. The oases do not, but the roads between them do. Keep a guide or keep a compass."
+        ],
+        "danger": [
+          "Jackals hunt in packs, scorpions hide in the sand, and dust wraiths come with the wind. I pay guards well for a reason."
+        ],
+        "weather": [
+          "The sun is a merchant too. It takes everything and gives shade for a price."
+        ]
+      },
+      "about_self": [
+        "I started with one camel and a sack of cumin. Now I have a stall, three camels, and a tendency to give speeches."
+      ],
+      "home_lines": [
+        "The Dust Bazaar never closes. Come at dawn for the best prices and at dusk for the best stories."
+      ],
+      "rumors": [
+        "There is a temple half-buried in the dunes. They say it hums at noon.",
+        "Scorpions the size of dogs have been seen near the pit. I pay triple for chitin."
+      ],
+      "stories": [
+        "A merchant once sold a mirage to a king. The king paid in full and never complained. I think about that often."
+      ],
+      "trade_lines": [
+        "I trade in spices and gossip. Your coin buys the first and your attention the second."
+      ],
+      "quest_lines": {
+        "bazaar_goods": {
+          "give": [
+            "Scorpion chitin! Three pieces, if you please. It makes the best lacquer and I pay triple. Bring them to me and we both profit."
+          ],
+          "remind": [
+            "Three pieces of scorpion chitin. The pit is south of here. Mind the stingers."
+          ],
+          "done": [
+            "Excellent! Fine quality. Here is your pay, and a little extra. Do not tell my competitors."
+          ]
+        }
+      },
+      "hidden_knowledge": "The Sun Temple is not empty. Something keeps the sand from covering its door. I have a map, and I am willing to share it for a smile and your trust.",
+      "trigger_keywords": [
+        "sun temple",
+        "temple",
+        "buried temple",
+        "your map"
+      ],
+      "reveal_story_flag": "learned_sun_temple",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "sun_temple"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The temple is where the map says. If you find gold, remember who gave you the map."
+      ]
+    },
+    {
+      "npc_id": "tamsin_the_well_keeper",
+      "name": "Tamsin the Well-Keeper",
+      "role": "Keeper of the Oasis",
+      "region": "Oasis of Tamsin",
+      "personality": [
+        "patient",
+        "weathered",
+        "kind"
+      ],
+      "aliases": [
+        "tamsin",
+        "well keeper",
+        "the well-keeper"
+      ],
+      "speech_style": "warm",
+      "home": {
+        "region": "sunscorch_dunes",
+        "landmark": "oasis_of_tamsin"
+      },
+      "knows": {
+        "regions": [
+          "sunscorch_dunes"
+        ],
+        "npcs": [
+          "zahra_qasim"
+        ]
+      },
+      "blurb": "Tamsin tends the oasis well and gives water to every traveller who asks.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Drink first, then talk. The desert has no patience for the thirsty."
+      ],
+      "opinions": {
+        "zahra_qasim": "Zahra is a hard bargainer but a good soul. She has never let my well run dry."
+      },
+      "topic_lines": {
+        "weather": [
+          "The sun comes up like a hammer and goes down like a prayer. In between, drink water."
+        ],
+        "danger": [
+          "Jackals at dusk, scorpions at noon, and wraiths when the wind rises. Stay near the well and you will be fine."
+        ],
+        "travel": [
+          "The dunes shift every night. Trust your feet less than the stars."
+        ],
+        "healing": [
+          "Water, shade, and rest. If they do not work, more of the same."
+        ],
+        "family": [
+          "My mother kept this well, and hers before her. I have no children. The well will have to do."
+        ]
+      },
+      "about_self": [
+        "Forty summers at the oasis. I have given water to kings and beggars. They drink the same."
+      ],
+      "home_lines": [
+        "The oasis is the only green for a hundred miles. Respect it and it will respect you."
+      ],
+      "rumors": [
+        "Wraiths have been circling nearer than usual. I think the old temple is stirring."
+      ],
+      "stories": [
+        "A traveller once asked the well to show his future. It showed him a glass of water. He was disappointed. He lived to be ninety."
+      ],
+      "quest_lines": {
+        "oasis_watch": {
+          "give": [
+            "Jackals have been stalking the oasis at dusk. Five of them would settle the matter. Please, I cannot do it myself anymore."
+          ],
+          "remind": [
+            "Five jackals near the oasis, dear. I will sleep better when they are gone."
+          ],
+          "done": [
+            "Thank you. The oasis breathes easier. Take this, and drink whenever you wish."
+          ]
+        }
+      },
+      "hidden_knowledge": "Beneath the oasis there is a spring that never dries. I have never told anyone, and I will tell you if you promise to protect it. The source is the Sun Temple's cistern, I believe.",
+      "trigger_keywords": [
+        "spring",
+        "source",
+        "never dries",
+        "sun temple"
+      ],
+      "reveal_story_flag": "learned_oasis_spring",
+      "rapport_threshold_for_secret": 3,
+      "reveal_marks": [
+        "sun_temple"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "You know the secret now. Guard it well."
+      ]
+    },
+    {
+      "npc_id": "odo_saltmarsh",
+      "name": "Odo Saltmarsh",
+      "role": "Lighthouse Keeper",
+      "region": "Gull Point Lighthouse",
+      "personality": [
+        "gruff",
+        "poetic",
+        "lonely"
+      ],
+      "aliases": [
+        "odo",
+        "saltmarsh",
+        "the lighthouse keeper",
+        "lighthouse keeper"
+      ],
+      "speech_style": "salty",
+      "home": {
+        "region": "stormcoast",
+        "landmark": "gull_point_lighthouse"
+      },
+      "knows": {
+        "regions": [
+          "stormcoast"
+        ],
+        "npcs": [
+          "nell_tidewater"
+        ]
+      },
+      "blurb": "Odo has kept the Gull Point light burning for thirty years and talks to the sea more than to people.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "Ahoy, landlubber. Mind the stairs, they are steeper than they look."
+      ],
+      "opinions": {
+        "nell_tidewater": "Nell down at the harbor? Sharp as a hook and twice as honest. She brings me bread when the fog sets in."
+      },
+      "topic_lines": {
+        "weather": [
+          "Storm by sundown, I would wager. The gulls have gone quiet.",
+          "Fog in the morning, sun at noon, rain at night. The coast never makes up its mind."
+        ],
+        "history": [
+          "The light was built after a hundred ships went down in a single winter. We do not forget them."
+        ],
+        "danger": [
+          "Shore crabs on the rocks, drowned sailors in the surf, and worse in the cove. Watch your footing."
+        ],
+        "travel": [
+          "The coast road is the safest way south. The sea road is the fastest way to the bottom."
+        ],
+        "gods": [
+          "The sea has her own gods. They do not like to be named. I leave them an offering and a candle."
+        ]
+      },
+      "about_self": [
+        "Thirty years of oil, wick, and weather. I have seen a ship lost and a ship saved, and I do not know which I think of more."
+      ],
+      "home_lines": [
+        "Gull Point is the end of the world, or the start. Depends on your direction."
+      ],
+      "rumors": [
+        "There is a wreck in the cove with a ghost crew. They signal at midnight. I do not signal back.",
+        "Smugglers use the tidecaller cave. The tide hides their boats. I pretend not to see."
+      ],
+      "stories": [
+        "The lamp once guided a ship home that had been dead for a century. The crew waved and sailed on into the fog. I wave back every night."
+      ],
+      "quest_lines": {
+        "keep_the_light": {
+          "give": [
+            "The light needs oil, and the oil needs kelp, four fronds of sea kelp from the rocks below. Bring them and the lamp will burn through the storm."
+          ],
+          "remind": [
+            "Four fronds of sea kelp, from the shore rocks. The storm will not wait."
+          ],
+          "done": [
+            "The lamp burns bright. Ships will find home tonight. You have my thanks, landlubber."
+          ]
+        }
+      },
+      "hidden_knowledge": "The wreck in Wreck Cove is the Marigold, a ship I watched go down. Her captain still keeps a locked chest in the hold. I could never bring myself to look. Maybe you can.",
+      "trigger_keywords": [
+        "wreck",
+        "wreck cove",
+        "marigold",
+        "chest"
+      ],
+      "reveal_story_flag": "learned_wreck_cove",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "wreck_cove"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The wreck is south of the harbor. If you find the chest, leave me out of it."
+      ]
+    },
+    {
+      "npc_id": "nell_tidewater",
+      "name": "Nell Tidewater",
+      "role": "Harbor Fishwife",
+      "region": "Driftwood Harbor",
+      "personality": [
+        "lively",
+        "outspoken",
+        "generous"
+      ],
+      "aliases": [
+        "nell",
+        "tidewater",
+        "the fishwife",
+        "fishwife"
+      ],
+      "speech_style": "salty",
+      "home": {
+        "region": "stormcoast",
+        "landmark": "driftwood_harbor"
+      },
+      "knows": {
+        "regions": [
+          "stormcoast",
+          "highmeadow"
+        ],
+        "npcs": [
+          "odo_saltmarsh",
+          "bess_hartwell"
+        ]
+      },
+      "blurb": "Nell runs the fish stall at Driftwood Harbor and knows every boat by its creak.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Fresh catch, fresh gossip, fresh bread. Pick one or take all three, love!"
+      ],
+      "opinions": {
+        "odo_saltmarsh": "Old Odo keeps the light. Grumpy as a barnacle and just as stubborn. I love him dearly.",
+        "bess_hartwell": "Bess at Kingsford buys my smoked fish. She also complains about the smell. That is how we know we are friends."
+      },
+      "topic_lines": {
+        "food": [
+          "Smoked herring, salt cod, and eel stew. If it swims, I can cook it.",
+          "Never eat a fish that looks back at you. Unless it is very fresh."
+        ],
+        "weather": [
+          "Wind from the west, rain by noon. My knees are never wrong."
+        ],
+        "money": [
+          "Pearls pay well, but the divers pay with fingers. I pay in fish."
+        ],
+        "travel": [
+          "Boats go up and down the coast. I know every captain and half their debts."
+        ],
+        "family": [
+          "My husband went to sea and sent a postcard from every port. Then he stopped. I kept the postcards."
+        ]
+      },
+      "about_self": [
+        "I came to the harbor as a girl and I will leave it as a legend, or a fish. Whichever comes first."
+      ],
+      "home_lines": [
+        "Driftwood Harbor is built from what the tide leaves. We are all driftwood here."
+      ],
+      "rumors": [
+        "A pearl diver brought up something strange last week. Black, round, humming. He sold it before I could look.",
+        "Smugglers are working the north cove again. The tide helps them."
+      ],
+      "stories": [
+        "They say a mermaid once bargained for a net. She gave a pearl and took the net home. The fish have been scarce since."
+      ],
+      "quest_lines": {
+        "harbor_pearls": {
+          "give": [
+            "The divers will not go down this week, it is rough water. I need two pearl shells, love. Find them along the shore rocks and I will pay well."
+          ],
+          "remind": [
+            "Two pearl shells from the shore. The tide leaves them just below the high mark."
+          ],
+          "done": [
+            "Lovely! Just lovely. Here is your pay and a bit of smoked fish besides."
+          ]
+        }
+      },
+      "hidden_knowledge": "The smugglers meet in a camp hidden past the north rocks. The tide cuts the path twice a day. If you go at low tide, you can reach them dry-footed. They pay a lot of people to look away. I did not take their coin.",
+      "trigger_keywords": [
+        "smugglers",
+        "smuggler camp",
+        "north cove",
+        "low tide"
+      ],
+      "reveal_story_flag": "learned_smugglers_camp",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "smugglers_camp"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "Low tide, north rocks. I told you what I know. The rest is your business."
+      ]
+    },
+    {
+      "npc_id": "marrow_vane",
+      "name": "Marrow Vane",
+      "role": "Swamp Hedge-Witch",
+      "region": "Mossfen Hut",
+      "personality": [
+        "eccentric",
+        "cackling",
+        "surprisingly wise"
+      ],
+      "aliases": [
+        "marrow",
+        "vane",
+        "the witch",
+        "hedge witch",
+        "swamp witch"
+      ],
+      "speech_style": "wry",
+      "home": {
+        "region": "gloomfen",
+        "landmark": "mossfen_hut"
+      },
+      "knows": {
+        "regions": [
+          "gloomfen"
+        ],
+        "npcs": [
+          "brother_alder"
+        ]
+      },
+      "blurb": "Marrow Vane brews swamp potions and mutters to her cauldron, which mutters back.",
+      "default_mood": "Neutral",
+      "greeting_first": [
+        "Hee! A visitor! Mind the toads, they bite. Mind the cauldron, it bites harder."
+      ],
+      "opinions": {
+        "brother_alder": "Brother Alder prays in a haunted chapel. I brew in a haunted hut. We are both quite mad, but he is politer about it."
+      },
+      "topic_lines": {
+        "magic": [
+          "Magic is stew with intent. Add what the swamp offers and stir clockwise.",
+          "Bog lilies for sorrow, glowcaps for courage. Mix and you have a fine soup."
+        ],
+        "animals": [
+          "Toads hear everything. Lurkers hear more. Never trust a quiet swamp."
+        ],
+        "danger": [
+          "Lurkers pull travellers under. Bog boars charge when startled. And the fen has other things besides."
+        ],
+        "healing": [
+          "Swamp-water poultice for cuts. Peat tea for fever. Never mix the two."
+        ],
+        "food": [
+          "I eat what the swamp feeds me. Do not ask what."
+        ]
+      },
+      "about_self": [
+        "I was a scholar once. Then I learned the swamp knows more than books. Now I am a witch. Much better hours."
+      ],
+      "home_lines": [
+        "Mossfen Hut stands where the ground stays dry. The only dry spot for a mile. Be grateful."
+      ],
+      "rumors": [
+        "The old chapel is sinking. The bell tolls on its own. Brother Alder pretends not to hear it.",
+        "Something at the leech pools is eating the leeches. I would like to know what."
+      ],
+      "stories": [
+        "A traveller once asked my cauldron for the future. It showed him a bowl of soup. He ate the soup. He was happy."
+      ],
+      "quest_lines": {
+        "swamp_brew": {
+          "give": [
+            "My brew wants three bog lilies and two glowcaps. Pick them from the fen, but mind where you step. Hee!"
+          ],
+          "remind": [
+            "Three bog lilies, two glowcaps. The brew is getting impatient."
+          ],
+          "done": [
+            "Perfect! The cauldron approves. Take a vial of the finished brew. Do not sip it in front of strangers."
+          ]
+        }
+      },
+      "hidden_knowledge": "The drowned hollow to the south holds a sunken village. At low water you can see rooftops. The people did not drown, they were drowned, and their bell still rings beneath the water.",
+      "trigger_keywords": [
+        "drowned hollow",
+        "sunken village",
+        "rooftops",
+        "bell"
+      ],
+      "reveal_story_flag": "learned_drowned_hollow",
+      "rapport_threshold_for_secret": 2,
+      "reveal_marks": [
+        "drowned_hollow"
+      ],
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The hollow is where I told you. Do not drink the water."
+      ]
+    },
+    {
+      "npc_id": "brother_alder",
+      "name": "Brother Alder",
+      "role": "Chapel Keeper",
+      "region": "Sunken Chapel",
+      "personality": [
+        "gentle",
+        "haunted",
+        "stubbornly hopeful"
+      ],
+      "aliases": [
+        "alder",
+        "the brother",
+        "the monk",
+        "the chaplain"
+      ],
+      "speech_style": "lyrical",
+      "home": {
+        "region": "gloomfen",
+        "landmark": "sunken_chapel"
+      },
+      "knows": {
+        "regions": [
+          "gloomfen"
+        ],
+        "npcs": [
+          "marrow_vane"
+        ]
+      },
+      "blurb": "Brother Alder keeps a chapel the swamp is slowly swallowing and prays for those who rest beneath it.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Peace upon you, traveller. Mind the water; it rises faster than prayer."
+      ],
+      "opinions": {
+        "marrow_vane": "Marrow is a witch, or so she claims. I find her kinder than most priests. Do not tell my bishop."
+      },
+      "topic_lines": {
+        "gods": [
+          "I pray to whatever listens. The chapel has heard many gods and kept none.",
+          "Faith is a candle in a damp room. It flickers, but it still counts."
+        ],
+        "history": [
+          "The chapel was built on dry ground. The ground changed its mind."
+        ],
+        "danger": [
+          "The dead here are restless. They do not mean harm, but they do not know the difference anymore."
+        ],
+        "night": [
+          "At night the bell tolls. I used to ring it. Now I only listen."
+        ],
+        "healing": [
+          "I tend the sick when they come. Most come too late. I bury them kindly."
+        ]
+      },
+      "about_self": [
+        "I came here to serve. I stayed to keep company with the forgotten."
+      ],
+      "home_lines": [
+        "The chapel is sinking by an inch each year. I have measured. It is oddly comforting."
+      ],
+      "rumors": [
+        "Restless dead walk the chapel grounds. I have taken to leaving them candles.",
+        "A witch lives in the hut north of here. She makes soup that glows. I do not ask."
+      ],
+      "stories": [
+        "The first priest of this chapel swore the swamp would give back what it took. It has not yet. I am patient."
+      ],
+      "quest_lines": {
+        "quiet_the_chapel": {
+          "give": [
+            "The dead are restless. Four of them have wandered into the chapel grounds. Lay them to rest, and I will be in your debt."
+          ],
+          "remind": [
+            "Four restless dead, near the chapel. Be gentle, if you can."
+          ],
+          "done": [
+            "Peace at last. The chapel is quiet. Take this, with my blessing."
+          ]
+        }
+      },
+      "hidden_knowledge": "Beneath the chapel there is a crypt that was sealed long ago. The names on the door are worn smooth, but I remember them. If you must go, say each one aloud first.",
+      "trigger_keywords": [
+        "crypt",
+        "sealed",
+        "names on the door",
+        "below the chapel"
+      ],
+      "reveal_story_flag": "learned_chapel_crypt",
+      "rapport_threshold_for_secret": 3,
+      "reveal_exp": 30,
+      "follow_up_lines": [
+        "The crypt is below. Speak the names. They will answer."
+      ]
+    },
+    {
+      "npc_id": "ignatius_vale",
+      "name": "Ignatius Vale",
+      "role": "Volcanic Scholar",
+      "region": "Cinder Ruins",
+      "personality": [
+        "obsessive",
+        "brilliant",
+        "forgetful of danger"
+      ],
+      "aliases": [
+        "ignatius",
+        "vale",
+        "the scholar",
+        "scholar"
+      ],
+      "speech_style": "scholarly",
+      "home": {
+        "region": "ashen_wastes",
+        "landmark": "cinder_ruins"
+      },
+      "knows": {
+        "regions": [
+          "ashen_wastes"
+        ],
+        "npcs": []
+      },
+      "blurb": "Ignatius studies the Ashen Wastes' fire and stone, and has not noticed that it is trying to kill him.",
+      "default_mood": "Friendly",
+      "greeting_first": [
+        "Fascinating! A living person! Quickly, do you know the melting point of obsidian?"
+      ],
+      "opinions": {},
+      "topic_lines": {
+        "history": [
+          "The Ashen Legion marched here in the old wars and burned. Their ghosts still drill in the ash. Fascinating, really.",
+          "Ruined cities beneath ruined cities. That is the Ashen Wastes in a sentence."
+        ],
+        "magic": [
+          "The fire here is not natural. It thinks. I have notes, if you would like to read them. Seventeen volumes."
+        ],
+        "danger": [
+          "Cinder hounds, ember golems, ash wraiths, and ashen knights. I find them all instructive."
+        ],
+        "crafting": [
+          "Obsidian cuts finer than steel and shatters like a promise. Sulfur burns brighter than anything honest."
+        ],
+        "weather": [
+          "The ash falls like snow. It does not melt. It buries."
+        ]
+      },
+      "about_self": [
+        "I was a scholar of the Royal Academy. I came here to study the flames and was relieved of my chair for my enthusiasm."
+      ],
+      "home_lines": [
+        "The Cinder Ruins were a city once. Now they are a laboratory. My laboratory."
+      ],
+      "rumors": [
+        "There is a throne at the heart of the wastes. The fire sits on it. I do not recommend a visit.",
+        "The obsidian spire hums when the volcano breathes. I have measured it."
+      ],
+      "stories": [
+        "A knight once walked into the fire to prove his courage. The fire politely declined him. He was sent home with a mild scorch."
+      ],
+      "quest_lines": {
+        "obsidian_studies": {
+          "give": [
+            "For my research I need three samples of sulfur and two of obsidian. Gather them from the wastes. I would do it myself, but I am rather busy being fascinated."
+          ],
+          "remind": [
+            "Three sulfur, two obsidian. The wastes provide, if you survive them."
+          ],
+          "done": [
+            "Magnificent samples! Here is your payment, and a note of thanks for my footnotes."
+          ]
+        }
+      },
+      "hidden_knowledge": "The Ember Throne sits at the heart of the wastes, and something sits upon it. I have measured its heat from afar. It is not a volcano. It is a king, and it is awake.",
+      "trigger_keywords": [
+        "ember throne",
+        "throne",
+        "the king",
+        "heart of the wastes"
+      ],
+      "reveal_story_flag": "learned_ember_throne",
+      "rapport_threshold_for_secret": 3,
+      "reveal_marks": [
+        "ember_throne"
+      ],
+      "reveal_exp": 50,
+      "follow_up_lines": [
+        "The throne is east. Do not go unprepared. Do not go, in fact. But you will."
+      ]
     }
   ]
 }

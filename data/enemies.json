@@ -1,0 +1,1238 @@
+{
+ "enemies": {
+  "dire_wolf": {
+   "name": "Dire Wolf",
+   "behavior": "melee",
+   "art": "wolf",
+   "hp": 40,
+   "damage": 6,
+   "exp": 25,
+   "speed": 108,
+   "chase_range": 240,
+   "attack_range": 30,
+   "attack_cooldown": 1.1,
+   "windup": 0.28,
+   "color": [
+    0.42,
+    0.42,
+    0.48,
+    1
+   ],
+   "eye": [
+    1.0,
+    0.25,
+    0.2,
+    1
+   ],
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.65,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "wolf_pelt",
+     "chance": 0.35,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "boar": {
+   "name": "Boar",
+   "behavior": "charger",
+   "art": "boar",
+   "hp": 35,
+   "damage": 7,
+   "exp": 20,
+   "speed": 72,
+   "chase_range": 200,
+   "attack_range": 26,
+   "attack_cooldown": 2.2,
+   "windup": 0.55,
+   "color": [
+    0.42,
+    0.28,
+    0.2,
+    1
+   ],
+   "eye": [
+    0.95,
+    0.75,
+    0.2,
+    1
+   ],
+   "collision_radius": 10,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.85,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "boar_tusk",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "red_fang_bandit": {
+   "name": "Red Fang Bandit",
+   "behavior": "melee",
+   "art": "bandit",
+   "hp": 60,
+   "damage": 8,
+   "exp": 40,
+   "speed": 88,
+   "chase_range": 260,
+   "attack_range": 30,
+   "attack_cooldown": 1.2,
+   "windup": 0.32,
+   "tunic": [
+    0.5,
+    0.14,
+    0.12,
+    1
+   ],
+   "pants": [
+    0.25,
+    0.2,
+    0.17,
+    1
+   ],
+   "hat": "bandana",
+   "hat_color": [
+    0.75,
+    0.1,
+    0.1,
+    1
+   ],
+   "weapon": "axe",
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "bandit_insignia",
+     "chance": 0.55,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "berries",
+     "chance": 0.2,
+     "min": 1,
+     "max": 3
+    }
+   ]
+  },
+  "bandit_archer": {
+   "name": "Red Fang Archer",
+   "behavior": "ranged",
+   "art": "bandit",
+   "hp": 42,
+   "damage": 7,
+   "exp": 35,
+   "speed": 80,
+   "chase_range": 300,
+   "attack_range": 190,
+   "preferred_range": 150,
+   "attack_cooldown": 1.9,
+   "windup": 0.45,
+   "projectile_speed": 260,
+   "projectile_color": [
+    0.85,
+    0.7,
+    0.3,
+    1
+   ],
+   "tunic": [
+    0.3,
+    0.3,
+    0.2,
+    1
+   ],
+   "pants": [
+    0.25,
+    0.2,
+    0.17,
+    1
+   ],
+   "hat": "hood",
+   "hat_color": [
+    0.25,
+    0.22,
+    0.15,
+    1
+   ],
+   "weapon": "bow",
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "bandit_insignia",
+     "chance": 0.5,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "healing_herb",
+     "chance": 0.15,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "wisp": {
+   "name": "Marsh Wisp",
+   "behavior": "ranged",
+   "art": "wisp",
+   "hp": 26,
+   "damage": 9,
+   "exp": 32,
+   "speed": 70,
+   "chase_range": 280,
+   "attack_range": 200,
+   "preferred_range": 140,
+   "attack_cooldown": 2.2,
+   "windup": 0.5,
+   "projectile_speed": 200,
+   "projectile_color": [
+    0.5,
+    0.95,
+    1.0,
+    1
+   ],
+   "color": [
+    0.5,
+    0.95,
+    1.0,
+    1
+   ],
+   "collision_radius": 8,
+   "flying": true,
+   "night_only": true,
+   "drops": [
+    {
+     "item": "healing_herb",
+     "chance": 0.4,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "mushroom",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "skar": {
+   "name": "Skar, Beastmaster",
+   "behavior": "boss",
+   "art": "skar",
+   "hp": 400,
+   "damage": 18,
+   "exp": 300,
+   "speed": 82,
+   "chase_range": 420,
+   "attack_range": 38,
+   "attack_cooldown": 1.3,
+   "windup": 0.4,
+   "tunic": [
+    0.35,
+    0.1,
+    0.1,
+    1
+   ],
+   "pants": [
+    0.2,
+    0.15,
+    0.12,
+    1
+   ],
+   "hat": "horned",
+   "hat_color": [
+    0.4,
+    0.4,
+    0.44,
+    1
+   ],
+   "weapon": "axe",
+   "cape": [
+    0.3,
+    0.05,
+    0.05,
+    1
+   ],
+   "scale": 1.6,
+   "collision_radius": 14,
+   "drops": [
+    {
+     "item": "bandit_insignia",
+     "chance": 1.0,
+     "min": 2,
+     "max": 3
+    },
+    {
+     "item": "cooked_meat",
+     "chance": 1.0,
+     "min": 2,
+     "max": 2
+    }
+   ]
+  },
+  "shadow_wolf": {
+   "name": "Shadow Wolf",
+   "behavior": "melee",
+   "art": "wolf",
+   "hp": 58,
+   "damage": 9,
+   "exp": 38,
+   "speed": 122,
+   "chase_range": 260,
+   "attack_range": 30,
+   "attack_cooldown": 1.0,
+   "windup": 0.26,
+   "color": [
+    0.16,
+    0.15,
+    0.22,
+    1
+   ],
+   "eye": [
+    0.7,
+    0.3,
+    1.0,
+    1
+   ],
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.6,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "wolf_pelt",
+     "chance": 0.5,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "bone_dust",
+     "chance": 0.15,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "bone_soldier": {
+   "name": "Bone Soldier",
+   "behavior": "melee",
+   "art": "humanoid",
+   "hp": 70,
+   "damage": 10,
+   "exp": 44,
+   "speed": 70,
+   "chase_range": 230,
+   "attack_range": 32,
+   "attack_cooldown": 1.4,
+   "windup": 0.4,
+   "tunic": [
+    0.78,
+    0.76,
+    0.68,
+    1
+   ],
+   "pants": [
+    0.6,
+    0.58,
+    0.5,
+    1
+   ],
+   "hat": "helm",
+   "hat_color": [
+    0.55,
+    0.55,
+    0.58,
+    1
+   ],
+   "weapon": "sword",
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "bone_dust",
+     "chance": 0.6,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "ancient_coin",
+     "chance": 0.08,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "old_key",
+     "chance": 0.04,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "eyes_glow": true
+  },
+  "snow_wolf": {
+   "name": "Snow Wolf",
+   "behavior": "melee",
+   "art": "wolf",
+   "hp": 70,
+   "damage": 11,
+   "exp": 48,
+   "speed": 118,
+   "chase_range": 260,
+   "attack_range": 30,
+   "attack_cooldown": 1.0,
+   "windup": 0.26,
+   "color": [
+    0.88,
+    0.92,
+    0.97,
+    1
+   ],
+   "eye": [
+    0.3,
+    0.75,
+    1.0,
+    1
+   ],
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.6,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "wolf_pelt",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "frost_fang",
+     "chance": 0.1,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "frost_bear": {
+   "name": "Frost Bear",
+   "behavior": "melee",
+   "art": "frostbear",
+   "hp": 150,
+   "damage": 18,
+   "exp": 95,
+   "speed": 66,
+   "chase_range": 210,
+   "attack_range": 38,
+   "attack_cooldown": 1.9,
+   "windup": 0.6,
+   "color": [
+    0.85,
+    0.9,
+    0.95,
+    1
+   ],
+   "eye": [
+    0.2,
+    0.6,
+    1.0,
+    1
+   ],
+   "collision_radius": 14,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.9,
+     "min": 2,
+     "max": 3
+    },
+    {
+     "item": "wolf_pelt",
+     "chance": 0.6,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "frost_fang",
+     "chance": 0.35,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "scale": 1.15
+  },
+  "ice_wisp": {
+   "name": "Ice Wisp",
+   "behavior": "ranged",
+   "art": "wisp",
+   "hp": 44,
+   "damage": 13,
+   "exp": 62,
+   "speed": 74,
+   "chase_range": 300,
+   "attack_range": 210,
+   "attack_cooldown": 2.0,
+   "windup": 0.5,
+   "color": [
+    0.7,
+    0.9,
+    1.0,
+    1
+   ],
+   "eye": [
+    0.7,
+    0.9,
+    1.0,
+    1
+   ],
+   "collision_radius": 8,
+   "drops": [
+    {
+     "item": "frost_bloom",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "frost_fang",
+     "chance": 0.1,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "flying": true,
+   "preferred_range": 150,
+   "projectile_speed": 210,
+   "projectile_color": [
+    0.7,
+    0.92,
+    1.0,
+    1
+   ]
+  },
+  "highway_bandit": {
+   "name": "Highway Bandit",
+   "behavior": "melee",
+   "art": "humanoid",
+   "hp": 64,
+   "damage": 9,
+   "exp": 42,
+   "speed": 90,
+   "chase_range": 260,
+   "attack_range": 30,
+   "attack_cooldown": 1.15,
+   "windup": 0.3,
+   "tunic": [
+    0.3,
+    0.32,
+    0.4,
+    1
+   ],
+   "pants": [
+    0.2,
+    0.2,
+    0.24,
+    1
+   ],
+   "hat": "hood",
+   "hat_color": [
+    0.2,
+    0.2,
+    0.26,
+    1
+   ],
+   "weapon": "dagger",
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "bandit_insignia",
+     "chance": 0.4,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "ancient_coin",
+     "chance": 0.12,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "bread",
+     "chance": 0.25,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "hill_brigand": {
+   "name": "Hill Brigand",
+   "behavior": "melee",
+   "art": "humanoid",
+   "hp": 96,
+   "damage": 13,
+   "exp": 66,
+   "speed": 86,
+   "chase_range": 260,
+   "attack_range": 32,
+   "attack_cooldown": 1.25,
+   "windup": 0.34,
+   "tunic": [
+    0.4,
+    0.28,
+    0.18,
+    1
+   ],
+   "pants": [
+    0.25,
+    0.22,
+    0.18,
+    1
+   ],
+   "hat": "helm",
+   "hat_color": [
+    0.5,
+    0.45,
+    0.4,
+    1
+   ],
+   "weapon": "axe",
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "bandit_insignia",
+     "chance": 0.45,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "iron_ore",
+     "chance": 0.3,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "cheese",
+     "chance": 0.2,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "rock_golem": {
+   "name": "Rock Golem",
+   "behavior": "melee",
+   "art": "golem",
+   "hp": 190,
+   "damage": 20,
+   "exp": 110,
+   "speed": 48,
+   "chase_range": 200,
+   "attack_range": 40,
+   "attack_cooldown": 2.2,
+   "windup": 0.7,
+   "color": [
+    0.52,
+    0.5,
+    0.48,
+    1
+   ],
+   "eye": [
+    1.0,
+    0.7,
+    0.2,
+    1
+   ],
+   "collision_radius": 14,
+   "drops": [
+    {
+     "item": "iron_ore",
+     "chance": 0.8,
+     "min": 1,
+     "max": 3
+    },
+    {
+     "item": "coal",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "copper_ore",
+     "chance": 0.4,
+     "min": 1,
+     "max": 2
+    }
+   ],
+   "scale": 1.1,
+   "glow": [
+    0.9,
+    0.7,
+    0.2,
+    1
+   ],
+   "knockback_resist": 0.5
+  },
+  "dune_jackal": {
+   "name": "Dune Jackal",
+   "behavior": "melee",
+   "art": "wolf",
+   "hp": 62,
+   "damage": 12,
+   "exp": 52,
+   "speed": 132,
+   "chase_range": 270,
+   "attack_range": 30,
+   "attack_cooldown": 0.95,
+   "windup": 0.24,
+   "color": [
+    0.78,
+    0.6,
+    0.32,
+    1
+   ],
+   "eye": [
+    1.0,
+    0.85,
+    0.2,
+    1
+   ],
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.6,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "sun_date",
+     "chance": 0.12,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "scale": 0.92
+  },
+  "giant_scorpion": {
+   "name": "Giant Scorpion",
+   "behavior": "melee",
+   "art": "scorpion",
+   "hp": 95,
+   "damage": 16,
+   "exp": 85,
+   "speed": 84,
+   "chase_range": 220,
+   "attack_range": 34,
+   "attack_cooldown": 1.6,
+   "windup": 0.5,
+   "color": [
+    0.62,
+    0.45,
+    0.22,
+    1
+   ],
+   "eye": [
+    0.9,
+    0.1,
+    0.1,
+    1
+   ],
+   "collision_radius": 12,
+   "drops": [
+    {
+     "item": "scorpion_chitin",
+     "chance": 0.85,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "raw_meat",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "scale": 1.15
+  },
+  "dust_wraith": {
+   "name": "Dust Wraith",
+   "behavior": "ranged",
+   "art": "wisp",
+   "hp": 70,
+   "damage": 15,
+   "exp": 90,
+   "speed": 66,
+   "chase_range": 300,
+   "attack_range": 210,
+   "attack_cooldown": 2.1,
+   "windup": 0.55,
+   "color": [
+    0.85,
+    0.7,
+    0.45,
+    1
+   ],
+   "eye": [
+    0.85,
+    0.7,
+    0.45,
+    1
+   ],
+   "collision_radius": 8,
+   "drops": [
+    {
+     "item": "bone_dust",
+     "chance": 0.5,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "ancient_coin",
+     "chance": 0.12,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "flying": true,
+   "preferred_range": 160,
+   "projectile_speed": 215,
+   "projectile_color": [
+    0.9,
+    0.75,
+    0.45,
+    1
+   ]
+  },
+  "shore_crab": {
+   "name": "Shore Crab",
+   "behavior": "melee",
+   "art": "crab",
+   "hp": 54,
+   "damage": 10,
+   "exp": 40,
+   "speed": 60,
+   "chase_range": 190,
+   "attack_range": 28,
+   "attack_cooldown": 1.5,
+   "windup": 0.45,
+   "color": [
+    0.85,
+    0.4,
+    0.3,
+    1
+   ],
+   "eye": [
+    0.05,
+    0.05,
+    0.05,
+    1
+   ],
+   "collision_radius": 10,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.5,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "pearl_shell",
+     "chance": 0.08,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "sea_kelp",
+     "chance": 0.2,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "drowned_sailor": {
+   "name": "Drowned Sailor",
+   "behavior": "melee",
+   "art": "humanoid",
+   "hp": 88,
+   "damage": 12,
+   "exp": 70,
+   "speed": 66,
+   "chase_range": 230,
+   "attack_range": 32,
+   "attack_cooldown": 1.5,
+   "windup": 0.42,
+   "tunic": [
+    0.25,
+    0.4,
+    0.42,
+    1
+   ],
+   "pants": [
+    0.2,
+    0.26,
+    0.28,
+    1
+   ],
+   "hat": "cap",
+   "hat_color": [
+    0.15,
+    0.24,
+    0.28,
+    1
+   ],
+   "weapon": "hammer",
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "sea_kelp",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "pearl_shell",
+     "chance": 0.2,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "ancient_coin",
+     "chance": 0.1,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "old_key",
+     "chance": 0.03,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "bog_lurker": {
+   "name": "Bog Lurker",
+   "behavior": "melee",
+   "art": "lurker",
+   "hp": 120,
+   "damage": 15,
+   "exp": 88,
+   "speed": 72,
+   "chase_range": 210,
+   "attack_range": 34,
+   "attack_cooldown": 1.7,
+   "windup": 0.55,
+   "color": [
+    0.3,
+    0.42,
+    0.22,
+    1
+   ],
+   "eye": [
+    1.0,
+    0.85,
+    0.2,
+    1
+   ],
+   "collision_radius": 12,
+   "drops": [
+    {
+     "item": "bog_slime",
+     "chance": 0.8,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "bog_lily",
+     "chance": 0.25,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "raw_meat",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "bog_boar": {
+   "name": "Bog Boar",
+   "behavior": "charger",
+   "art": "boar",
+   "hp": 84,
+   "damage": 14,
+   "exp": 56,
+   "speed": 78,
+   "chase_range": 210,
+   "attack_range": 28,
+   "attack_cooldown": 2.2,
+   "windup": 0.55,
+   "color": [
+    0.28,
+    0.34,
+    0.22,
+    1
+   ],
+   "eye": [
+    0.95,
+    0.8,
+    0.2,
+    1
+   ],
+   "collision_radius": 10,
+   "drops": [
+    {
+     "item": "raw_meat",
+     "chance": 0.85,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "boar_tusk",
+     "chance": 0.4,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "bog_slime",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "cinder_hound": {
+   "name": "Cinder Hound",
+   "behavior": "melee",
+   "art": "wolf",
+   "hp": 96,
+   "damage": 17,
+   "exp": 100,
+   "speed": 130,
+   "chase_range": 280,
+   "attack_range": 30,
+   "attack_cooldown": 1.0,
+   "windup": 0.24,
+   "color": [
+    0.28,
+    0.12,
+    0.1,
+    1
+   ],
+   "eye": [
+    1.0,
+    0.55,
+    0.1,
+    1
+   ],
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "coal",
+     "chance": 0.6,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "ember_core",
+     "chance": 0.06,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "raw_meat",
+     "chance": 0.4,
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  "ember_golem": {
+   "name": "Ember Golem",
+   "behavior": "melee",
+   "art": "golem",
+   "hp": 260,
+   "damage": 26,
+   "exp": 170,
+   "speed": 52,
+   "chase_range": 220,
+   "attack_range": 42,
+   "attack_cooldown": 2.2,
+   "windup": 0.7,
+   "color": [
+    0.22,
+    0.18,
+    0.18,
+    1
+   ],
+   "eye": [
+    1.0,
+    0.4,
+    0.1,
+    1
+   ],
+   "collision_radius": 15,
+   "drops": [
+    {
+     "item": "coal",
+     "chance": 0.9,
+     "min": 2,
+     "max": 3
+    },
+    {
+     "item": "sulfur",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "ember_core",
+     "chance": 0.15,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "obsidian_shard",
+     "chance": 0.2,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "scale": 1.2,
+   "glow": [
+    1.0,
+    0.4,
+    0.1,
+    1
+   ],
+   "knockback_resist": 0.6
+  },
+  "ash_wraith": {
+   "name": "Ash Wraith",
+   "behavior": "ranged",
+   "art": "wisp",
+   "hp": 90,
+   "damage": 19,
+   "exp": 130,
+   "speed": 70,
+   "chase_range": 320,
+   "attack_range": 220,
+   "attack_cooldown": 1.9,
+   "windup": 0.5,
+   "color": [
+    0.65,
+    0.6,
+    0.62,
+    1
+   ],
+   "eye": [
+    0.9,
+    0.5,
+    0.3,
+    1
+   ],
+   "collision_radius": 8,
+   "drops": [
+    {
+     "item": "bone_dust",
+     "chance": 0.5,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "sulfur",
+     "chance": 0.3,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "ember_core",
+     "chance": 0.05,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "flying": true,
+   "preferred_range": 170,
+   "projectile_speed": 225,
+   "projectile_color": [
+    0.95,
+    0.5,
+    0.25,
+    1
+   ]
+  },
+  "ashen_knight": {
+   "name": "Ashen Knight",
+   "behavior": "melee",
+   "art": "humanoid",
+   "hp": 170,
+   "damage": 22,
+   "exp": 160,
+   "speed": 74,
+   "chase_range": 250,
+   "attack_range": 34,
+   "attack_cooldown": 1.4,
+   "windup": 0.42,
+   "tunic": [
+    0.2,
+    0.2,
+    0.24,
+    1
+   ],
+   "pants": [
+    0.15,
+    0.14,
+    0.16,
+    1
+   ],
+   "hat": "horned",
+   "hat_color": [
+    0.3,
+    0.3,
+    0.34,
+    1
+   ],
+   "weapon": "sword",
+   "collision_radius": 9,
+   "drops": [
+    {
+     "item": "obsidian_shard",
+     "chance": 0.35,
+     "min": 1,
+     "max": 1
+    },
+    {
+     "item": "ancient_coin",
+     "chance": 0.3,
+     "min": 1,
+     "max": 2
+    },
+    {
+     "item": "ember_core",
+     "chance": 0.08,
+     "min": 1,
+     "max": 1
+    }
+   ],
+   "scale": 1.15,
+   "knockback_resist": 0.4
+  }
+ }
+}

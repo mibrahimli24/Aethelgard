@@ -19,7 +19,9 @@
     "bandit_hp": 60,
     "bandit_damage": 8,
     "bandit_exp_reward": 40,
-    "bandit_count": 4
+    "bandit_count": 4,
+    "archer_id": "bandit_archer",
+    "archer_count": 2
   },
   "resources": ["Oak Wood", "Copper Ore", "Raw Meat", "Hide"]
 }

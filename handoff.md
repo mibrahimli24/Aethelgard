@@ -1,6 +1,6 @@
 # Aethelgard — Handoff Notes
 
-Last updated: 2026-08-20 (session 3 — graphics/story/dialogue depth pass, on top of the "all 5 classes combat-viable + crafting + autosave fix" session before it).
+Last updated: 2026-10-06 (session 5 — large 3x3 world, guidance, map, token-free dialogue, animation; see its section below. Session 4 — big visual/gameplay pass: world decor, day/night, HUD/menus, combat feel, survival content). Sessions 2-3 below.
 
 ## What exists and works (playtested)
 
@@ -11,7 +11,30 @@ The original vertical slice (see `C:\Users\user\.claude\plans\validated-seeking-
 
 The "session 2" work (all 5 classes combat-viable, crafting loop, autosave fix — see the section below this one) was also reported working by the user ("it worked nicely, I defeated the boss and logged out").
 
-## What was added in session 3 (this session — not yet playtested, Godot isn't installed here)
+## What was added in session 4 (verified headlessly + windowed screenshots; real playtest feel NOT verified)
+
+Godot 4.7 was downloaded to `C:\Users\user\AppData\Local\Temp\godot-check\` (outside the repo) so this session could actually run the project. Headless boot is clean (only the benign "ObjectDB instances leaked" warning), and a scripted smoke test exercised attack/special/dodge, all interactables, camp reveal, class switching, night wisps, death, save/load and quest stages with no script errors. Windowed screenshots confirmed the look of village day/dusk/night, camp fight, boss and HUD.
+
+**Conventions worth knowing**
+- Origin at feet for all characters/props; Y-sort via the `Entities` node; `Ground` at z -100. `Art._poly` clamps z <= 0, so draw order inside a prop is insertion order; positive z only for overlays/effects.
+- Physics layers: player=1, enemy=2, world obstacles=4.
+- No `class_name`; use `const X = preload(...)`. JSON numbers load as floats. `PackedVector2Array` can't be `const`.
+- Lights: `Fx.make_light(radius,color,energy)` registers into group `night_lights` (meta `base_energy`); `World._process` scales `energy` by darkness and never touches `visible`.
+
+**New / rewritten systems**
+- `autoloads/Fx.gd` (new autoload): procedural audio (AudioStreamWAV, M mutes), hit-stop, screen shake, light factory, ring/burst FX.
+- `scripts/Art.gd` (Polygon2D-primitive builders), `scripts/WorldDecor.gd` (paths, village houses/well/lamps, trees, ridge, pond, flowers, waystones), `scripts/UiStyle.gd` (shared dark-gold UI theme).
+- `scenes/World.gd` (new; World.tscn now builds most content in code): decor, fireflies, critters (`Critter.gd`, rabbits/deer that flee), day/night cycle with dusk/dawn toasts, level-scaled wild spawner every 6 s (wolves/boars, wisps at night), red-fang camp reveal (tents, torches, bandits + archers, boss) driven by `action_dispatched` / `quest_updated`, remaining-bandit respawn from kill counts on load.
+- `scenes/Interactable.gd/.tscn`: campfires (cook raw food, rest), chests, waystones, forage nodes (berries, herbs, mushrooms).
+- Combat: dodge (Shift, i-frames), class specials (Q, cooldown shown in HUD), archers, boars, wisps, boss phases; enemy data in `data/enemies.json`; items/food/cooking in `data/items.json` (F eats best food).
+- UI: code-built `HUD.gd` (vitals, quest panel, clock + minimap, hotbar, toast stack, interact prompt, boss bar, low-HP vignette, death overlay), `InventoryUI.gd` (item rows, Eat buttons, recipes, stats), `PauseMenu.gd` (Esc: resume/save/sound/quit + controls), styled `DialogueUI` (typewriter) and `ClassSwitchUI`.
+- Side quests `mira_remedy`, `hunters_bounty` exist in `data/quests.json`; NPCs have no bespoke dialogue lines for them yet (falls back to generic replies).
+
+**Controls**: WASD move, Space attack, Q special, Shift dodge, E interact, F eat, I satchel, C class menu, Esc pause, M mute.
+
+**Cleanup note**: every Godot run inside this repo creates `Godot/` and `NVIDIA Corporation/` (user:// maps there); both are run artifacts and were deleted at the end of this session. Delete them again if they reappear (they may pollute `save.json`).
+
+## What was added in session 3 (not playtested by the user at the time)
 
 Prompted by: "improve graphics, story, and all other aspects; NPCs don't have much to say after finishing the quest with a different role; give NPCs more freedom to speak; gradually implement other phases beyond mocked phase 1."
 
@@ -61,11 +84,25 @@ Prompted by: "improve graphics, story, and all other aspects; NPCs don't have mu
    - Added `_notification(NOTIFICATION_WM_CLOSE_REQUEST)` to save-then-quit when the window is closed.
    - **This has not been tested.** Please verify: play a bit, close the window (X button), relaunch, and confirm progress (level, quest stage, story flags) survived. If the window-close path doesn't fire the notification reliably in your Godot version, an alternative is hooking `get_tree().auto_accept_quit` or a manual "Save & Quit" menu item.
 
+## What was added in session 5 (verified headlessly + scripted runtime smoke test + screenshots; NOT human-playtested)
+
+Requested: guide the player, richer NPC dialogue without tokens, a map, item info, a much larger world built gradually, and real animation. All six are in.
+
+- **World**: 12000x9000 at (-150,-150), a 3x3 grid of regions (whispering_glades, thornwood, hollow_peaks / highmeadow, ironhold_hills, sunscorch_dunes / stormcoast, gloomfen, ashen_wastes). `scripts/Regions.gd` is the static data API (landmarks, `get_landmark`, `region_at`). `WorldBiomes.gd` gives per-region palettes/trees, `WorldDecor.gd` lazily streams decor per region as the player approaches, `WorldLandmarks.gd` places set pieces from spec arrays `[kind, dx, dy, params...]` in `WorldLayoutsA.gd` (23) and `WorldLayoutsB.gd` (15). `ArtBiome.gd` holds the new prop art. Guards, wild enemies, NPCs and forage are placed per landmark/region.
+- **Guidance**: `scenes/UI/GuideUI` (objective/pointer), NPC "!" / "?" markers via `GameState.get_npc_marker`.
+- **Map**: `scenes/UI/MapUI` (open with the map key); shows regions, landmarks, waystones.
+- **Dialogue**: `GameMaster` has a token-free topic/keyword engine (`USE_REAL_API=false`) covering all 21 NPCs beyond quest lines. Known quirks: asking Ferris "where is the camp" gives the Quarry text; asking Garrick "who is bess" gives "New to this, aren't you?".
+- **Items**: every item has an info panel (description, stats, uses) in the inventory.
+- **Animation**: `scripts/Anim.gd` drives humanoids (walk, attack kinds, roll, hurt), beasts, wisps, death tweens. Wired into Player, Enemy/Boss, NPC (idle plus work gestures) and Critter (breathing, hop squash; new frog/lizard/crab kinds). Art.humanoid cfg keys: tunic, pants, skin, hair, eyes, hat, hat_color, weapon, weapon_color, cape, scale.
+- **Forage**: new items (iron_ore, coal, sulfur, obsidian_shard, amber, pine_resin, sea_kelp, pearl_shell, cactus_fruit, sun_date, honeycomb) via `Interactable._build_generic_forage`.
+- **Smoke test results** (landmarks quarry/harbor/bazaar/fen hut/kingsford): NPCs and forage spawned, 100+ fps on an RTX 3050, no script errors.
+- **Please playtest**: travel across regions (streaming hitches?), map, guide pointer, long NPC conversations, combat animation feel, performance on lower-end GPUs.
+
 ## Suggested next steps
 
 Roughly in priority order:
 1. **Verify everything in session 3 actually runs** — this is the most important next step. Open the project, and specifically watch for: the `quests.json` shape change (make sure both quests load), the boss fight → Rebuilding Era phase transition actually firing after the final quest stage, Old Ferris's dialogue hooks (`meet_ferris` → `bring_shard` → turn in the shard fragment → recipe unlock for whatever class is active), the new casual-topic variety not silently falling back to the "can't say I have much to add" default, and the graphics additions (torch glow, NPC colors, facing indicator, hit-flash, death-burst particles) rendering without console errors.
-2. **Real sprites/art** — everything is still colored `Polygon2D` primitives; this is the single biggest visual upgrade left and wasn't attempted this session since it requires either an art pipeline decision (import assets? procedural shapes only?) or actual asset sourcing, both of which are bigger scope/require your input on direction and licensing.
+2. **Real sprites/art** — everything is still colored `Polygon2D` primitives (far more detailed since session 4); real sprites remain the biggest visual upgrade and require either an art pipeline decision (import assets? procedural shapes only?) or actual asset sourcing, both of which are bigger scope/require your input on direction and licensing.
 3. **Second biome** (Sunken Coast & Marshes per the original spec) — would need a new `data/biome_*.json`, a new World-like scene (or an exit trigger from the current World scene), and probably a simple overworld/biome-transition mechanism, since right now `World.tscn` *is* the entire game.
 4. **Real Anthropic API swap-in** for `GameMaster.process_dialogue()` — the seam is now explicitly documented (`USE_REAL_API` constant + phasing note at the top of `GameMaster.gd`), and the JSON contract is unchanged, so this is a scoped, additive follow-up whenever an API key + network layer are available. Nothing else in the codebase needs to change for this.
 5. **Deeper inventory** (stacking limits, consumables like food items — `eat_food()` exists in `GameState` but nothing in the game currently grants/uses food items).
@@ -74,4 +111,4 @@ Roughly in priority order:
 
 ## Environment reminder
 
-Godot is still not installed on this dev machine. All verification needs to happen on your end — open the project, run it, and report back anything that errors or feels wrong. Given the scope of session 3 (multi-quest architecture, rewritten `npcs.json`, rewritten `GameMaster.gd`), a full playtest pass (both quests, a couple of classes, closing/reopening a save) is worth doing before trusting this is stable, rather than spot-checking just the new bits.
+Godot is not installed system-wide on this dev machine; session 4 used a temp download of 4.7 for headless/screenshot checks only. Balance and moment-to-moment feel still need a human playtest — open the project, run it, and report back anything that errors or feels wrong. Given the scope of session 3 (multi-quest architecture, rewritten `npcs.json`, rewritten `GameMaster.gd`), a full playtest pass (both quests, a couple of classes, closing/reopening a save) is worth doing before trusting this is stable, rather than spot-checking just the new bits.
